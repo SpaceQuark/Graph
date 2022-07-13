@@ -1,0 +1,5 @@
+Graph (Version 0.0)
+
+A C++ implementation of a Graph object
+It currently supports several basic features (mutators and accessors of vertices and edges)
+Future versions would include formal testing and several graph algorithms
