@@ -1,0 +1,5 @@
+/home/quarkz/projects/Graph/out/CMakeFiles/a.out.app.dir
+/home/quarkz/projects/Graph/out/CMakeFiles/a.out.exp.dir
+/home/quarkz/projects/Graph/out/CMakeFiles/a.out.gtest.dir
+/home/quarkz/projects/Graph/out/CMakeFiles/edit_cache.dir
+/home/quarkz/projects/Graph/out/CMakeFiles/rebuild_cache.dir
