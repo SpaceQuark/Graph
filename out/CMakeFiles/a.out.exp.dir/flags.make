@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/home/quarkz/projects/Graph/app -I/home/quarkz/projects/Graph/exp
 
-CXX_FLAGS = -stdlib=libc++ -Wall -pedantic-errors -Werror -g -fstandalone-debug -std=c++17
+CXX_FLAGS = -stdlib=libc++ -Wall -pedantic-errors -Werror -g -fstandalone-debug -std=c++20
 

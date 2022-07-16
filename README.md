@@ -1,5 +1,5 @@
-Graph (Version 0.0)
+# Graph Library
 
 A C++ implementation of a Graph object
-It currently supports several basic features (mutators and accessors of vertices and edges)
+It currently supports several basic features (vertices and edges)
 Future versions would include formal testing and several graph algorithms
