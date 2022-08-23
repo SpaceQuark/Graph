@@ -2,9 +2,9 @@ cmake_minimum_required(VERSION 3.16)
 
 
 
-set(CMAKE_C_COMPILER clang-14)
+set(CMAKE_C_COMPILER clang)
 set(CMAKE_CXX_COMPILER clang++-14)
-set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
@@ -42,13 +42,15 @@ target_link_libraries(${PROJECT_NAME} pthread c++)
 
 
 
+
+
 project(a.out.gtest)
 
 file(GLOB GTEST_SRC_FILES ${CMAKE_SOURCE_DIR}/gtest/*.cpp)
 
-add_executable(${PROJECT_NAME} ${GTEST_SRC_FILES} ${APP_SRC_FILES_EXCEPT_MAIN})
-set_target_properties(${PROJECT_NAME} PROPERTIES COMPILE_FLAGS ${COMPILE_FLAGS})
-target_include_directories(${PROJECT_NAME} PRIVATE ${CMAKE_SOURCE_DIR}/app)
-target_include_directories(${PROJECT_NAME} PRIVATE ${CMAKE_SOURCE_DIR}/gtest)
-target_link_libraries(${PROJECT_NAME} pthread c++ gtest gtest_main)
+find_package(GTest REQUIRED)
+include_directories(${GTEST_INCLUDE_DIRS})
 
+add_executable(${PROJECT_NAME} ${GTEST_SRC_FILES})
+
+target_link_libraries(${PROJECT_NAME} ${GTEST_LIBRARIES} pthread c++)

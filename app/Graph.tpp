@@ -1,13 +1,13 @@
 #ifndef GRAPH_TPP
 #define GRAPH_TPP
+#include "prettyprint.hpp"
 
-
-template <typename T, typename W>
-Graph<T,W>::Graph(bool digraph, bool weight)
+template <typename V, typename W>
+Graph<V,W>::Graph(bool digraph, bool weight)
     : vertices{}, edges{}, numV{}, numE{}, directed{digraph}, weighted{weight} {}
 
-template <typename T, typename W>
-Graph<T,W>::Graph(const std::vector<T>& vs, bool digraph, bool weight)
+template <typename V, typename W>
+Graph<V,W>::Graph(const vectV& vs, bool digraph, bool weight)
     : edges{}, numV{}, numE{}, directed{digraph}, weighted{weight} 
 {
     for (const auto& v : vs)
@@ -16,13 +16,13 @@ Graph<T,W>::Graph(const std::vector<T>& vs, bool digraph, bool weight)
     }
 }
 
-template <typename T, typename W>
-void Graph<T,W>::add_vertex(const T& v)
+template <typename V, typename W>
+void Graph<V,W>::add_vertex(const V& v)
 {
     if (!has_vertex(v))
     {
         vertices.insert({v, numV++});
-        edges[v] = std::vector<std::pair<T, W>>();
+        edges[v] = vector<pair<V, W>>();
     }
     else
     {
@@ -30,14 +30,38 @@ void Graph<T,W>::add_vertex(const T& v)
     }
 }
 
-template <typename T, typename W>
-void Graph<T,W>::del_vertex(const T& v)
+template <typename V, typename W>
+void Graph<V,W>::del_vertex(const V& v)
 {
+
     if (has_vertex(v))
     {
-       vertices.erase(v);
-       edges.erase(v);
-       --numV;
+        // size_t idx = vertices[v];
+        vertices.erase(v);
+        edges.erase(v);
+
+        // reset ids (indexes)
+        numV = 0;
+        for (const auto& vidx : vertices)
+        {
+            vertices[vidx.first] = numV++;
+        }
+
+        // Shift the adjacency list to new id
+        // for (size_t i = idx+1; i < numV; ++i)
+        // {
+        //     auto nk = edges.extract(i);
+        //     nk.key() = i-1;
+        //     // edges.insert(std::move(nk));
+        // }
+
+        // remove vertex via erase remove idiom
+        for (auto& [from, vec] : edges)
+        {
+            vec.erase(std::remove_if(vec.begin(), vec.end(), [&v](const pair<V,W>& ele)
+            {return ele.first == v;}), vec.end());
+        }
+        
     }
     else
     {
@@ -45,22 +69,21 @@ void Graph<T,W>::del_vertex(const T& v)
     }
 }
 
-template <typename T, typename W>
-void Graph<T,W>::add_edge(const T& v1, const T& v2)
+template <typename V, typename W>
+void Graph<V,W>::add_edge(const V& v1, const V& v2)
 {
-
     if (!has_edge(v1,v2))
     {
         if (!has_vertex(v1))
         {
             vertices.insert({v1, numV++});
-            edges[v1] = std::vector<std::pair<T, W>>();
+            edges[v1] = vector<pair<V, W>>();
         }
 
         if (!has_vertex(v2))
         {
             vertices.insert({v2, numV++});
-            edges[v2] = std::vector<std::pair<T, W>>();
+            edges[v2] = vector<pair<V, W>>();
         }
 
 
@@ -76,21 +99,21 @@ void Graph<T,W>::add_edge(const T& v1, const T& v2)
     }
 }
 
-template <typename T, typename W>
-void Graph<T,W>::add_edge(const T& v1, const T& v2, const W& w)
+template <typename V, typename W>
+void Graph<V,W>::add_edge(const V& v1, const V& v2, const W& w)
 {
     if (!has_edge(v1,v2))
     {
         if (!has_vertex(v1))
         {
             vertices.insert({v1, numV++});
-            edges[v1] = std::vector<std::pair<T, W>>();
+            edges[v1] = vector<pair<V, W>>();
         }
 
         if (!has_vertex(v2))
         {
             vertices.insert({v2, numV++});
-            edges[v2] = std::vector<std::pair<T, W>>();
+            edges[v2] = vector<pair<V, W>>();
         }
 
         edges[v1].push_back(std::make_pair(v2, w));
@@ -107,102 +130,140 @@ void Graph<T,W>::add_edge(const T& v1, const T& v2, const W& w)
     }
 }
 
-template <typename T, typename W>
-void Graph<T,W>::del_edge(const T& v1, const T& v2)
+template <typename V, typename W>
+void Graph<V,W>::del_edge(const V& v1, const V& v2)
 {
+    // remove edge via erase remove idiom
     if (has_vertex(v1) && has_vertex(v2))
     {
-        edges[v1].erase(std::remove_if(edges[v1].begin(), edges[v1].end(), [&v2](const std::pair<T,W>& ele){return ele.first == v2;}), edges[v1].end());
+        edges[v1].erase(std::remove_if(edges[v1].begin(), edges[v1].end(), [&v2](const pair<V,W>& ele){return ele.first == v2;}), edges[v1].end());
         
         if (!directed)
         {
-            edges[v2].erase(std::remove_if(edges[v2].begin(), edges[v2].end(), [&v1](const std::pair<T,W>& ele){return ele.first == v1;}), edges[v2].end());
+            edges[v2].erase(std::remove_if(edges[v2].begin(), edges[v2].end(), [&v1](const pair<V,W>& ele){return ele.first == v1;}), edges[v2].end());
         }
         --numE;
     }
     else
     {
-        std::cerr << "One of the provided vertex doesn't exist in this graph" << '\n';
+        std::cerr << "One of the provided vertex doesn'V exist in this graph" << '\n';
     }
 }
 
-template <typename T, typename W>
-int Graph<T,W>::total_edges() const
+template <typename V, typename W>
+int Graph<V,W>::total_edges() const
 {
     return numE;
 }
 
-template <typename T, typename W>
-int Graph<T,W>::outdegree(const T& v) const
+template <typename V, typename W>
+int Graph<V,W>::outdegree(const V& v) const
 {
     return edges[v].size();
 }
 
-template <typename T, typename W>
-inline bool Graph<T,W>::isDirected() const
+template <typename V, typename W>
+inline bool Graph<V,W>::is_directed() const
 {
     return directed;
 }
 
-template <typename T, typename W>
-inline bool Graph<T,W>::isWeighted() const
+template <typename V, typename W>
+inline bool Graph<V,W>::is_weighted() const
 {
     return weighted;
 }
 
-template <typename T, typename W>
-bool Graph<T,W>::has_vertex(const T& v) const
+template <typename V, typename W>
+bool Graph<V,W>::has_vertex(const V& v) const
 {
     return (vertices.find(v) != vertices.end());
 }
 
-template <typename T, typename W>
-bool Graph<T,W>::has_edge(const T& v1, const T& v2) 
+template <typename V, typename W>
+bool Graph<V,W>::has_edge(const V& v1, const V& v2) 
 {
     if (has_vertex(v1) && has_vertex(v2))
     {
         if (directed)
         {
-            return (std::find_if(edges[v1].begin(), edges[v1].end(), [&v2](const std::pair<T,W>& ele){return ele.first == v2;}) != edges[v1].end());
+            return (std::find_if(edges[v1].begin(), edges[v1].end(), [&v2](const pair<V,W>& ele){return ele.first == v2;}) != edges[v1].end());
         }
         else
         {
-            return (std::find_if(edges[v1].begin(), edges[v1].end(), [&v2](const std::pair<T,W>& ele){return ele.first == v2;}) != edges[v1].end())
-            && (std::find_if(edges[v2].begin(), edges[v2].end(), [&v1](const std::pair<T,W>& ele){return ele.first == v1;}) != edges[v2].end());
+            return (std::find_if(edges[v1].begin(), edges[v1].end(), [&v2](const pair<V,W>& ele){return ele.first == v2;}) != edges[v1].end())
+            && (std::find_if(edges[v2].begin(), edges[v2].end(), [&v1](const pair<V,W>& ele){return ele.first == v1;}) != edges[v2].end());
         }
     }
 
     return false;
 }
 
-template <typename T, typename W>
-void Graph<T,W>::pV() const
+template <typename V, typename W>
+auto Graph<V,W>::AM() ->matW
 {
-    for(const auto& vidx : vertices)
+    matW matrix(numV, vectW(numV, PINF<W>));
+
+    for (const auto& [from, vec] : edges)
     {
-        std::cout << "Vertex: " << vidx.first << "\n";
+        for (const auto& [to, w] : vec)
+        {
+            size_t idx{ vertices[from] };
+            size_t idy{ vertices[to] };
+            matrix[idx][idy] = w;
+        }
+    }
+
+    for (const auto& [v, index] : vertices)
+    {
+        matrix[index][index] = 0;
+    }
+
+    return matrix;
+}
+
+template <typename V, typename W>
+vector<std::tuple<V,V,W>> Graph<V,W>::EL() const
+{
+    vector<std::tuple<V,V,W>> edgeList{};
+    for (const auto& [from, vec] : edges)
+    {
+        for (const auto& [to, w] : vec)
+        {
+            edgeList.push_back(std::make_tuple(from, to, w));
+        }
+    }
+    return edgeList;
+}
+
+template <typename V, typename W>
+void Graph<V,W>::pV() const
+{
+    for(const auto& [v, idx] : vertices)
+    {
+        std::cout << "Vertex: " << v << " id: " << idx  << "\n";
     }
     std:: cout << "\n";
 }
 
-template <typename T, typename W>
-void Graph<T,W>::pL() const
+template <typename V, typename W>
+void Graph<V,W>::pL() const
 {
-    for(const auto& [v, vec] : edges)
+    for(const auto& [from, vec] : edges)
     {
-        std::cout << "Vertex: " << v;
+        std::cout << "Vertex: " << from;
         bool point{ true };
 
-        for (const auto& [adj, w] : vec)
+        for (const auto& [to, w] : vec)
         {
             if (point)
             {
-                std::cout << " -> " << adj << " (w = " << w << ')'; 
+                std::cout << " -> " << to << " (w = " << w << ')'; 
                 point = false;
             }
             else
             {
-                std::cout << ", " << adj << " (w = " << w << ')'; 
+                std::cout << ", " << to << " (w = " << w << ')'; 
             }
         }
         std::cout << '\n';
@@ -210,41 +271,54 @@ void Graph<T,W>::pL() const
     std::cout << "\n";
 }
 
-template <typename T, typename W>
-void Graph<T,W>::pM()
+template <typename V, typename W>
+void Graph<V,W>::pM()
 {
-    std::vector<std::vector<W>> matrix(numV, std::vector<W>(numV, 0));
-    for (const auto& [v, vec] : edges)
+    matW matrix = AM();
+
+    // Create a temporary vector lookup
+    vectV lookup(numV);
+
+    for (const auto& [v, idx] : vertices)
     {
-        for (const auto& [adj, w] : vec)
-        {
-            size_t idx{ vertices[v] };
-            size_t idy{ vertices[adj] };
-            matrix[idx][idy] = w;
-        }
+        lookup[idx] = v;
     }
 
+
     // printing the 2D matrix
-    auto it = edges.begin();
-    // int adv{};
 
     std::cout << std::string(10, ' ' );
-    for (const auto& vvec : edges)
+    for (const auto& v : lookup)
     {
-        std::cout << std::setw(10) << std::left << vvec.first;
+        std::cout << std::setw(10) << std::left << v;
     }
     std::cout << '\n';
     
 
     for (int i = 0; i < numV; ++i)
     {
-        std::cout << std::setw(10) << std::left << it->first;
+        std::cout << std::setw(10) << std::left << lookup[i];
         for (int j = 0; j < numV; ++j)
         {
-            std::cout << std::setw(10) << matrix[i][j];
+            if (matrix[i][j] == PINF<W> || matrix[i][j] == gmax<W>)
+            {
+                std::cout << std::setw(12) << "\u221E";
+            }
+            else
+            {
+               std::cout << std::setw(10) << matrix[i][j];
+            }
         }
         std::cout << '\n';
-        std::advance(it, 1);
+    }
+}
+
+template <typename V, typename W>
+void Graph<V,W>::pEL() const
+{
+    for (const auto& [from, to, w] : EL())
+    {
+        std::cout << "Start: " << from << " End: "<< to << " Weight: " << w << std::endl;
     }
 }
 

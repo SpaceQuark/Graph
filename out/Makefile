@@ -155,6 +155,33 @@ a.out.gtest/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.gtest.dir/build.make CMakeFiles/a.out.gtest.dir/build
 .PHONY : a.out.gtest/fast
 
+app/UnionFind.o: app/UnionFind.cpp.o
+.PHONY : app/UnionFind.o
+
+# target to build an object file
+app/UnionFind.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.app.dir/build.make CMakeFiles/a.out.app.dir/app/UnionFind.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.exp.dir/build.make CMakeFiles/a.out.exp.dir/app/UnionFind.cpp.o
+.PHONY : app/UnionFind.cpp.o
+
+app/UnionFind.i: app/UnionFind.cpp.i
+.PHONY : app/UnionFind.i
+
+# target to preprocess a source file
+app/UnionFind.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.app.dir/build.make CMakeFiles/a.out.app.dir/app/UnionFind.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.exp.dir/build.make CMakeFiles/a.out.exp.dir/app/UnionFind.cpp.i
+.PHONY : app/UnionFind.cpp.i
+
+app/UnionFind.s: app/UnionFind.cpp.s
+.PHONY : app/UnionFind.s
+
+# target to generate assembly for a file
+app/UnionFind.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.app.dir/build.make CMakeFiles/a.out.app.dir/app/UnionFind.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.exp.dir/build.make CMakeFiles/a.out.exp.dir/app/UnionFind.cpp.s
+.PHONY : app/UnionFind.cpp.s
+
 app/main.o: app/main.cpp.o
 .PHONY : app/main.o
 
@@ -179,6 +206,30 @@ app/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.app.dir/build.make CMakeFiles/a.out.app.dir/app/main.cpp.s
 .PHONY : app/main.cpp.s
 
+exp/Components.o: exp/Components.cpp.o
+.PHONY : exp/Components.o
+
+# target to build an object file
+exp/Components.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.exp.dir/build.make CMakeFiles/a.out.exp.dir/exp/Components.cpp.o
+.PHONY : exp/Components.cpp.o
+
+exp/Components.i: exp/Components.cpp.i
+.PHONY : exp/Components.i
+
+# target to preprocess a source file
+exp/Components.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.exp.dir/build.make CMakeFiles/a.out.exp.dir/exp/Components.cpp.i
+.PHONY : exp/Components.cpp.i
+
+exp/Components.s: exp/Components.cpp.s
+.PHONY : exp/Components.s
+
+# target to generate assembly for a file
+exp/Components.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.exp.dir/build.make CMakeFiles/a.out.exp.dir/exp/Components.cpp.s
+.PHONY : exp/Components.cpp.s
+
 exp/expmain.o: exp/expmain.cpp.o
 .PHONY : exp/expmain.o
 
@@ -202,6 +253,198 @@ exp/expmain.s: exp/expmain.cpp.s
 exp/expmain.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.exp.dir/build.make CMakeFiles/a.out.exp.dir/exp/expmain.cpp.s
 .PHONY : exp/expmain.cpp.s
+
+gtest/APSPTest.o: gtest/APSPTest.cpp.o
+.PHONY : gtest/APSPTest.o
+
+# target to build an object file
+gtest/APSPTest.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.gtest.dir/build.make CMakeFiles/a.out.gtest.dir/gtest/APSPTest.cpp.o
+.PHONY : gtest/APSPTest.cpp.o
+
+gtest/APSPTest.i: gtest/APSPTest.cpp.i
+.PHONY : gtest/APSPTest.i
+
+# target to preprocess a source file
+gtest/APSPTest.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.gtest.dir/build.make CMakeFiles/a.out.gtest.dir/gtest/APSPTest.cpp.i
+.PHONY : gtest/APSPTest.cpp.i
+
+gtest/APSPTest.s: gtest/APSPTest.cpp.s
+.PHONY : gtest/APSPTest.s
+
+# target to generate assembly for a file
+gtest/APSPTest.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.gtest.dir/build.make CMakeFiles/a.out.gtest.dir/gtest/APSPTest.cpp.s
+.PHONY : gtest/APSPTest.cpp.s
+
+gtest/BridgesArticulationTest.o: gtest/BridgesArticulationTest.cpp.o
+.PHONY : gtest/BridgesArticulationTest.o
+
+# target to build an object file
+gtest/BridgesArticulationTest.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.gtest.dir/build.make CMakeFiles/a.out.gtest.dir/gtest/BridgesArticulationTest.cpp.o
+.PHONY : gtest/BridgesArticulationTest.cpp.o
+
+gtest/BridgesArticulationTest.i: gtest/BridgesArticulationTest.cpp.i
+.PHONY : gtest/BridgesArticulationTest.i
+
+# target to preprocess a source file
+gtest/BridgesArticulationTest.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.gtest.dir/build.make CMakeFiles/a.out.gtest.dir/gtest/BridgesArticulationTest.cpp.i
+.PHONY : gtest/BridgesArticulationTest.cpp.i
+
+gtest/BridgesArticulationTest.s: gtest/BridgesArticulationTest.cpp.s
+.PHONY : gtest/BridgesArticulationTest.s
+
+# target to generate assembly for a file
+gtest/BridgesArticulationTest.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.gtest.dir/build.make CMakeFiles/a.out.gtest.dir/gtest/BridgesArticulationTest.cpp.s
+.PHONY : gtest/BridgesArticulationTest.cpp.s
+
+gtest/ExampleTest.o: gtest/ExampleTest.cpp.o
+.PHONY : gtest/ExampleTest.o
+
+# target to build an object file
+gtest/ExampleTest.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.gtest.dir/build.make CMakeFiles/a.out.gtest.dir/gtest/ExampleTest.cpp.o
+.PHONY : gtest/ExampleTest.cpp.o
+
+gtest/ExampleTest.i: gtest/ExampleTest.cpp.i
+.PHONY : gtest/ExampleTest.i
+
+# target to preprocess a source file
+gtest/ExampleTest.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.gtest.dir/build.make CMakeFiles/a.out.gtest.dir/gtest/ExampleTest.cpp.i
+.PHONY : gtest/ExampleTest.cpp.i
+
+gtest/ExampleTest.s: gtest/ExampleTest.cpp.s
+.PHONY : gtest/ExampleTest.s
+
+# target to generate assembly for a file
+gtest/ExampleTest.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.gtest.dir/build.make CMakeFiles/a.out.gtest.dir/gtest/ExampleTest.cpp.s
+.PHONY : gtest/ExampleTest.cpp.s
+
+gtest/GraphTest.o: gtest/GraphTest.cpp.o
+.PHONY : gtest/GraphTest.o
+
+# target to build an object file
+gtest/GraphTest.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.gtest.dir/build.make CMakeFiles/a.out.gtest.dir/gtest/GraphTest.cpp.o
+.PHONY : gtest/GraphTest.cpp.o
+
+gtest/GraphTest.i: gtest/GraphTest.cpp.i
+.PHONY : gtest/GraphTest.i
+
+# target to preprocess a source file
+gtest/GraphTest.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.gtest.dir/build.make CMakeFiles/a.out.gtest.dir/gtest/GraphTest.cpp.i
+.PHONY : gtest/GraphTest.cpp.i
+
+gtest/GraphTest.s: gtest/GraphTest.cpp.s
+.PHONY : gtest/GraphTest.s
+
+# target to generate assembly for a file
+gtest/GraphTest.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.gtest.dir/build.make CMakeFiles/a.out.gtest.dir/gtest/GraphTest.cpp.s
+.PHONY : gtest/GraphTest.cpp.s
+
+gtest/MSTTest.o: gtest/MSTTest.cpp.o
+.PHONY : gtest/MSTTest.o
+
+# target to build an object file
+gtest/MSTTest.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.gtest.dir/build.make CMakeFiles/a.out.gtest.dir/gtest/MSTTest.cpp.o
+.PHONY : gtest/MSTTest.cpp.o
+
+gtest/MSTTest.i: gtest/MSTTest.cpp.i
+.PHONY : gtest/MSTTest.i
+
+# target to preprocess a source file
+gtest/MSTTest.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.gtest.dir/build.make CMakeFiles/a.out.gtest.dir/gtest/MSTTest.cpp.i
+.PHONY : gtest/MSTTest.cpp.i
+
+gtest/MSTTest.s: gtest/MSTTest.cpp.s
+.PHONY : gtest/MSTTest.s
+
+# target to generate assembly for a file
+gtest/MSTTest.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.gtest.dir/build.make CMakeFiles/a.out.gtest.dir/gtest/MSTTest.cpp.s
+.PHONY : gtest/MSTTest.cpp.s
+
+gtest/SSSPTest.o: gtest/SSSPTest.cpp.o
+.PHONY : gtest/SSSPTest.o
+
+# target to build an object file
+gtest/SSSPTest.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.gtest.dir/build.make CMakeFiles/a.out.gtest.dir/gtest/SSSPTest.cpp.o
+.PHONY : gtest/SSSPTest.cpp.o
+
+gtest/SSSPTest.i: gtest/SSSPTest.cpp.i
+.PHONY : gtest/SSSPTest.i
+
+# target to preprocess a source file
+gtest/SSSPTest.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.gtest.dir/build.make CMakeFiles/a.out.gtest.dir/gtest/SSSPTest.cpp.i
+.PHONY : gtest/SSSPTest.cpp.i
+
+gtest/SSSPTest.s: gtest/SSSPTest.cpp.s
+.PHONY : gtest/SSSPTest.s
+
+# target to generate assembly for a file
+gtest/SSSPTest.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.gtest.dir/build.make CMakeFiles/a.out.gtest.dir/gtest/SSSPTest.cpp.s
+.PHONY : gtest/SSSPTest.cpp.s
+
+gtest/SearchTest.o: gtest/SearchTest.cpp.o
+.PHONY : gtest/SearchTest.o
+
+# target to build an object file
+gtest/SearchTest.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.gtest.dir/build.make CMakeFiles/a.out.gtest.dir/gtest/SearchTest.cpp.o
+.PHONY : gtest/SearchTest.cpp.o
+
+gtest/SearchTest.i: gtest/SearchTest.cpp.i
+.PHONY : gtest/SearchTest.i
+
+# target to preprocess a source file
+gtest/SearchTest.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.gtest.dir/build.make CMakeFiles/a.out.gtest.dir/gtest/SearchTest.cpp.i
+.PHONY : gtest/SearchTest.cpp.i
+
+gtest/SearchTest.s: gtest/SearchTest.cpp.s
+.PHONY : gtest/SearchTest.s
+
+# target to generate assembly for a file
+gtest/SearchTest.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.gtest.dir/build.make CMakeFiles/a.out.gtest.dir/gtest/SearchTest.cpp.s
+.PHONY : gtest/SearchTest.cpp.s
+
+gtest/TopSortTest.o: gtest/TopSortTest.cpp.o
+.PHONY : gtest/TopSortTest.o
+
+# target to build an object file
+gtest/TopSortTest.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.gtest.dir/build.make CMakeFiles/a.out.gtest.dir/gtest/TopSortTest.cpp.o
+.PHONY : gtest/TopSortTest.cpp.o
+
+gtest/TopSortTest.i: gtest/TopSortTest.cpp.i
+.PHONY : gtest/TopSortTest.i
+
+# target to preprocess a source file
+gtest/TopSortTest.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.gtest.dir/build.make CMakeFiles/a.out.gtest.dir/gtest/TopSortTest.cpp.i
+.PHONY : gtest/TopSortTest.cpp.i
+
+gtest/TopSortTest.s: gtest/TopSortTest.cpp.s
+.PHONY : gtest/TopSortTest.s
+
+# target to generate assembly for a file
+gtest/TopSortTest.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.gtest.dir/build.make CMakeFiles/a.out.gtest.dir/gtest/TopSortTest.cpp.s
+.PHONY : gtest/TopSortTest.cpp.s
 
 gtest/gtestmain.o: gtest/gtestmain.cpp.o
 .PHONY : gtest/gtestmain.o
@@ -238,12 +481,42 @@ help:
 	@echo "... a.out.app"
 	@echo "... a.out.exp"
 	@echo "... a.out.gtest"
+	@echo "... app/UnionFind.o"
+	@echo "... app/UnionFind.i"
+	@echo "... app/UnionFind.s"
 	@echo "... app/main.o"
 	@echo "... app/main.i"
 	@echo "... app/main.s"
+	@echo "... exp/Components.o"
+	@echo "... exp/Components.i"
+	@echo "... exp/Components.s"
 	@echo "... exp/expmain.o"
 	@echo "... exp/expmain.i"
 	@echo "... exp/expmain.s"
+	@echo "... gtest/APSPTest.o"
+	@echo "... gtest/APSPTest.i"
+	@echo "... gtest/APSPTest.s"
+	@echo "... gtest/BridgesArticulationTest.o"
+	@echo "... gtest/BridgesArticulationTest.i"
+	@echo "... gtest/BridgesArticulationTest.s"
+	@echo "... gtest/ExampleTest.o"
+	@echo "... gtest/ExampleTest.i"
+	@echo "... gtest/ExampleTest.s"
+	@echo "... gtest/GraphTest.o"
+	@echo "... gtest/GraphTest.i"
+	@echo "... gtest/GraphTest.s"
+	@echo "... gtest/MSTTest.o"
+	@echo "... gtest/MSTTest.i"
+	@echo "... gtest/MSTTest.s"
+	@echo "... gtest/SSSPTest.o"
+	@echo "... gtest/SSSPTest.i"
+	@echo "... gtest/SSSPTest.s"
+	@echo "... gtest/SearchTest.o"
+	@echo "... gtest/SearchTest.i"
+	@echo "... gtest/SearchTest.s"
+	@echo "... gtest/TopSortTest.o"
+	@echo "... gtest/TopSortTest.i"
+	@echo "... gtest/TopSortTest.s"
 	@echo "... gtest/gtestmain.o"
 	@echo "... gtest/gtestmain.i"
 	@echo "... gtest/gtestmain.s"

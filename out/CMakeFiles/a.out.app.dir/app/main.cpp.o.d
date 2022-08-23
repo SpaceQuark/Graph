@@ -1,6 +1,5 @@
 CMakeFiles/a.out.app.dir/app/main.cpp.o: \
   /home/quarkz/projects/Graph/app/main.cpp \
-  /home/quarkz/projects/Graph/app/Graph.hpp \
   /usr/lib/llvm-14/bin/../include/c++/v1/iostream \
   /usr/lib/llvm-14/bin/../include/c++/v1/__config \
   /usr/lib/llvm-14/bin/../include/c++/v1/__config_site \
@@ -415,22 +414,35 @@ CMakeFiles/a.out.app.dir/app/main.cpp.o: \
   /usr/lib/llvm-14/bin/../include/c++/v1/streambuf \
   /usr/include/nl_types.h \
   /usr/lib/llvm-14/bin/../include/c++/v1/__bsd_locale_fallbacks.h \
+  /home/quarkz/projects/Graph/app/Graph.hpp \
   /usr/lib/llvm-14/bin/../include/c++/v1/vector \
   /usr/lib/llvm-14/bin/../include/c++/v1/__split_buffer \
   /usr/lib/llvm-14/bin/../include/c++/v1/iomanip \
+  /usr/lib/llvm-14/bin/../include/c++/v1/optional \
   /usr/lib/llvm-14/bin/../include/c++/v1/unordered_map \
   /usr/lib/llvm-14/bin/../include/c++/v1/__functional/is_transparent.h \
   /usr/lib/llvm-14/bin/../include/c++/v1/__hash_table \
   /usr/lib/llvm-14/bin/../include/c++/v1/__node_handle \
-  /usr/lib/llvm-14/bin/../include/c++/v1/optional \
   /usr/lib/llvm-14/bin/../include/c++/v1/map \
   /usr/lib/llvm-14/bin/../include/c++/v1/__tree \
+  /usr/lib/llvm-14/bin/../include/c++/v1/unordered_set \
   /usr/lib/llvm-14/bin/../include/c++/v1/stack \
   /usr/lib/llvm-14/bin/../include/c++/v1/deque \
   /usr/lib/llvm-14/bin/../include/c++/v1/queue \
-  /home/quarkz/projects/Graph/app/Graph.tpp \
-  /home/quarkz/projects/Graph/app/GraphAlgo.tpp \
+  /home/quarkz/projects/Graph/app/Support/UnionFind.hpp \
   /home/quarkz/projects/Graph/app/prettyprint.hpp \
   /usr/lib/llvm-14/bin/../include/c++/v1/set \
-  /usr/lib/llvm-14/bin/../include/c++/v1/unordered_set \
-  /usr/lib/llvm-14/bin/../include/c++/v1/valarray
+  /usr/lib/llvm-14/bin/../include/c++/v1/valarray \
+  /home/quarkz/projects/Graph/app/Graph.tpp \
+  /home/quarkz/projects/Graph/app/GraphAlgo/DFS.tpp \
+  /home/quarkz/projects/Graph/app/GraphAlgo/BFS.tpp \
+  /home/quarkz/projects/Graph/app/GraphAlgo/TopSort.tpp \
+  /home/quarkz/projects/Graph/app/GraphAlgo/Dijkstras.tpp \
+  /home/quarkz/projects/Graph/app/GraphAlgo/BellmanFord.tpp \
+  /home/quarkz/projects/Graph/app/GraphAlgo/FloydWarshall.tpp \
+  /home/quarkz/projects/Graph/app/Applications/BridgesAndArticulations.tpp \
+  /home/quarkz/projects/Graph/app/GraphAlgo/Prims.tpp \
+  /home/quarkz/projects/Graph/app/GraphAlgo/Kruskals.tpp \
+  /home/quarkz/projects/Graph/app/GraphAlgo/TarjanSCC.tpp \
+  /home/quarkz/projects/Graph/app/Applications/Components.tpp \
+  /home/quarkz/projects/Graph/app/Applications/SSSPDAG.tpp

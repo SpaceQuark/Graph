@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/quarkz/projects/Graph/app/UnionFind.cpp" "CMakeFiles/a.out.app.dir/app/UnionFind.cpp.o" "gcc" "CMakeFiles/a.out.app.dir/app/UnionFind.cpp.o.d"
   "/home/quarkz/projects/Graph/app/main.cpp" "CMakeFiles/a.out.app.dir/app/main.cpp.o" "gcc" "CMakeFiles/a.out.app.dir/app/main.cpp.o.d"
   )
 
