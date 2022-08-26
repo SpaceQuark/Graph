@@ -1,7 +1,7 @@
 #include <gtest/gtest.h>
 #include "../app/Graph.hpp"
 
-TEST(FloydWarshallTests, FloydWarshallAPSP)
+TEST(FloydWarshallTests, FloydWarshallAPSPDiGraph)
 {
     Graph<int,float> g(true);
 

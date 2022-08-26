@@ -64,7 +64,7 @@ pair<unordered_map<V, int>, int> Graph<V,W>::TarjanSCC()
          }
          if (onStack[to])
          {
-            low[at] = std::min(low[at], low[to]);
+            low[at] = min(low[at], low[to]);
          }
       }
       

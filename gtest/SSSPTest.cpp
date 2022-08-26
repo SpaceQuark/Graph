@@ -3,7 +3,7 @@
 
 TEST(DijkstrasTests, DijkstrasSSSP)
 {
-    Graph<int,int> g(false);
+    Graph<int,int> g(false, true);
     g.add_edge( 0, 1, 4);
     g.add_edge( 0, 7, 8);
     g.add_edge( 1, 2, 8);
@@ -34,7 +34,7 @@ TEST(DijkstrasTests, DijkstrasSSSP)
 
 TEST(DijkstrasTests, DijkstrasShortestPath)
 {
-    Graph<int,int> g(false);
+    Graph<int,int> g(false, true);
     g.add_edge( 0, 1, 4);
     g.add_edge( 0, 7, 8);
     g.add_edge( 1, 2, 8);

@@ -1,6 +1,5 @@
 #ifndef GRAPH_TPP
 #define GRAPH_TPP
-#include "prettyprint.hpp"
 
 template <typename V, typename W>
 Graph<V,W>::Graph(bool digraph, bool weight)
@@ -87,11 +86,13 @@ void Graph<V,W>::add_edge(const V& v1, const V& v2)
         }
 
 
-        edges[v1].push_back(std::make_pair(v2, 1));
+        edges[v1].push_back({v2, 1});
         if (!directed)
         {
-            edges[v2].push_back(std::make_pair(v1, 1));
+            edges[v2].push_back({v1, 1});
         }
+        
+        ++numE;
     }
     else
     {
@@ -116,10 +117,10 @@ void Graph<V,W>::add_edge(const V& v1, const V& v2, const W& w)
             edges[v2] = vector<pair<V, W>>();
         }
 
-        edges[v1].push_back(std::make_pair(v2, w));
+        edges[v1].push_back({v2, w});
         if (!directed)
         {
-            edges[v2].push_back(std::make_pair(v1, w));
+            edges[v2].push_back({v1, w});
         }
         
         ++numE;
@@ -157,9 +158,27 @@ int Graph<V,W>::total_edges() const
 }
 
 template <typename V, typename W>
-int Graph<V,W>::outdegree(const V& v) const
+pair<unordered_map<V,int>, unordered_map<V,int>> Graph<V,W>::in_out_degree() const
 {
-    return edges[v].size();
+    unordered_map<V,int> in;
+    unordered_map<V,int> out;
+
+    for (const auto& vidx : vertices)
+    {
+        in.insert({vidx.first, 0});
+        out.insert({vidx.first, 0});
+    }
+
+    for (const auto& [from, vec] : edges)
+    {
+        for (const auto& [to, w] : vec)
+        {
+            ++out[from];
+            ++in[to];
+        }
+    }
+
+    return {in, out};
 }
 
 template <typename V, typename W>
@@ -223,14 +242,14 @@ auto Graph<V,W>::AM() ->matW
 }
 
 template <typename V, typename W>
-vector<std::tuple<V,V,W>> Graph<V,W>::EL() const
+auto Graph<V,W>::EL() const -> vector<wEdge>
 {
     vector<std::tuple<V,V,W>> edgeList{};
     for (const auto& [from, vec] : edges)
     {
         for (const auto& [to, w] : vec)
         {
-            edgeList.push_back(std::make_tuple(from, to, w));
+            edgeList.push_back({from, to, w});
         }
     }
     return edgeList;

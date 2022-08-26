@@ -53,17 +53,17 @@ vector<pair<V,V>> Graph<V,W>::find_bridges()
             DFS_util(to, at, DFS_util);
             
             // on the callback, propagates low-link values
-            low[at] = min(low[at], low[to]);
+            low[at] = std::min(low[at], low[to]);
 
             if (ids[at] < low[to])
             {
-               bridges.push_back(std::make_pair(at, to));
+               bridges.push_back({at, to});
             }
          }
          else
          {
             // visit an already visit node, which has a chance to have a lower id than current low-link value
-            low[at] = min(low[at], ids[to]);
+            low[at] = std::min(low[at], ids[to]);
          }
       }
    };
@@ -114,7 +114,7 @@ auto Graph<V,W>::find_articulations() -> setV
             DFS_util(to, at, DFS_util);
             
             // on the callback, propagates low-link values
-            low[at] = min(low[at], low[to]);
+            low[at] = std::min(low[at], low[to]);
 
             if (ids[at] < low[to])
             {
@@ -124,7 +124,7 @@ auto Graph<V,W>::find_articulations() -> setV
          else
          {
             // visit an already visit node, which has a chance to have a lower id than current low-link value
-            low[at] = min(low[at], ids[to]);
+            low[at] = std::min(low[at], ids[to]);
          }
       }
    };

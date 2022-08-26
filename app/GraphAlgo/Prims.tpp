@@ -11,18 +11,18 @@ Prim's MST algorithm
 
 Lazy implementation of Prim's Algorithm
 
-Time Complexity: O(E Log E)
+Time Complexity: O(E Log V)
 
 */
 template <typename V, typename W>
-pair<W, vector<pair<V,V>>> Graph<V,W>::Prims(const V& source)
+auto Graph<V,W>::Prims(const V& source) -> pair<W, vector<wEdge>>
 {
     // ---------- Setup ---------- //
     size_t totEdges = numV - 1; // total edges (For trees, total edges = total vertices - 1)
     size_t edgeCount = 0; // current edge count
     W mstCost = 0; // MST total weight
 
-    vector<pair<V,V>> mstEdges(totEdges);
+    vector<wEdge> mstEdges(totEdges);
     unordered_map<V, bool> visited;
 
     for (const auto& vidx : vertices)
@@ -30,13 +30,13 @@ pair<W, vector<pair<V,V>>> Graph<V,W>::Prims(const V& source)
         visited.insert({vidx.first, false});
     }
 
-    auto mint = [](const std::tuple<V, V, W>& lhs, const std::tuple<V, V, W>& rhs)
+    auto mint = [](const wEdge& lhs, const wEdge& rhs)
     { return std::get<2>(lhs) > std::get<2>(rhs); };
 
 
     // create a min heap priority queue (consists of a tuple of start vertex, end vertex, and edge weight) 
     // PQ sorts edges based on min edge weight
-    std::priority_queue<std::tuple<V,V,W>,std::vector<std::tuple<V, V, W>>, decltype(mint)> pq(mint);
+    std::priority_queue<wEdge,std::vector<wEdge>, decltype(mint)> pq(mint);
 
     
     // add edges helper lambda function
@@ -48,7 +48,7 @@ pair<W, vector<pair<V,V>>> Graph<V,W>::Prims(const V& source)
         {
             if (!visited[to])
             {
-                pq.push(std::make_tuple(from, to, w));
+                pq.push({from, to, w});
             }
         }
     };
@@ -80,7 +80,7 @@ pair<W, vector<pair<V,V>>> Graph<V,W>::Prims(const V& source)
             continue;
         }
 
-        mstEdges[edgeCount++] = std::make_pair(minVx, minVy);
+        mstEdges[edgeCount++] = {minVx, minVy, minVal};
         mstCost += minVal;
 
         addEdges(minVy);
@@ -89,10 +89,10 @@ pair<W, vector<pair<V,V>>> Graph<V,W>::Prims(const V& source)
     // No MST exist! Graph not entirely spanned
     if (edgeCount != totEdges)
     {
-        return std::make_pair(0, vector<pair<V,V>>());
+        return {0, vector<wEdge>()};
     }
 
-    return std::make_pair(mstCost, mstEdges);
+    return {mstCost, mstEdges};
 }
 
 

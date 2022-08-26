@@ -11,20 +11,21 @@ Algorithm steps:
    (if the nodes are already unified, we don't include this edge, otherwise we include it and unify the nodes)
 3. The algorithm terminates when every edge has been processed or all vertices are unified
 
+Time Complexity: O(E Log V)
 
 */
 
 template <typename V, typename W>
-pair<W, vector<pair<V,V>>> Graph<V,W>::Kruskals(const V& source)
+auto Graph<V,W>::Kruskals(const V& source) -> pair<W, vector<wEdge>>
 {
     // ---------- Setup ---------- //
     auto edgeList = EL(); // vector of start vertex, end vertex, weight
-    vector<pair<V,V>> mstEdges;
+    vector<wEdge> mstEdges;
     W mstCost = 0; // MST total weight
 
     // sort by the weight
     std::sort(edgeList.begin(), edgeList.end(), 
-        [](std::tuple<V, V, W> const &t1, std::tuple<V, V, W> const &t2) 
+        [](wEdge const &t1, wEdge const &t2) 
         {
             return std::get<2>(t1) < std::get<2>(t2);
         }
@@ -45,7 +46,7 @@ pair<W, vector<pair<V,V>>> Graph<V,W>::Kruskals(const V& source)
             continue;
         }
 
-        mstEdges.push_back(std::make_pair(from, to));
+        mstEdges.push_back({from, to, w});
         uf.unify(vertices[from], vertices[to]);
         mstCost += w;
 
@@ -58,10 +59,10 @@ pair<W, vector<pair<V,V>>> Graph<V,W>::Kruskals(const V& source)
     // No MST exist! Graph not entirely spanned
     if (uf.component_size(0) != numV)
     {
-        return std::make_pair(0, vector<pair<V,V>>());
+        return {0, vector<wEdge>()};
     }
 
-    return std::make_pair(mstCost, mstEdges);
+    return {mstCost, mstEdges};
 }
 
 #endif

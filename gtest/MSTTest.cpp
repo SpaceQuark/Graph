@@ -25,11 +25,9 @@ TEST(MSTalgo, PrimMST)
     g.add_edge(7, 8, 6);
 
     auto MST = g.Prims(0);
-    // std::cout << MST << std::endl;
-    // std::cout << g.Prims(0) << std::endl;
 
     int total_weight = 12;
-    vector<pair<int, int>> MST_edges = {{0, 4}, {4, 5}, {4, 3}, {3, 1}, {3, 7}, {7, 6}, {6, 8}, {8, 9}, {8, 2}};
+    vector<tuple<int, int, int>> MST_edges = {{0, 4, 1}, {4, 5, 1}, {4, 3, 2}, {3, 1, 2}, {3, 7, 2}, {7, 6, 1}, {6, 8, 2}, {8, 9, 0}, {8, 2, 1}};
 
     EXPECT_EQ(MST.first, total_weight);
     EXPECT_EQ(MST.second, MST_edges);
@@ -49,4 +47,11 @@ TEST(MSTAlgo, KruskalMST)
     g.add_edge(3, 4, 3);
     g.add_edge(5, 4, 3);
 
+    // In Progress: UnionFind linkage
+    // auto MST = g.Kruskals(0);
+
+    // int total_weight = 12;
+    // vector<tuple<int, int, int>> MST_edges = {{0, 4, 1}, {4, 5, 1}, {4, 3, 2}, {3, 1, 2}, {3, 7, 2}, {7, 6, 1}, {6, 8, 2}, {8, 9, 0}, {8, 2, 1}};
+    // EXPECT_EQ(MST.first, total_weight);
+    // EXPECT_EQ(MST.second, MST_edges);
 }

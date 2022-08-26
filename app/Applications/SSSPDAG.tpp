@@ -34,7 +34,7 @@ unordered_map<V, W> Graph<V,W>::DAG_shortest_path(V start)
                     dist[to] = newDist;
                 }
                 else{
-                    dist[to] = min(dist[to], newDist);
+                    dist[to] = std::min(dist[to], newDist);
                 }
             }
         }

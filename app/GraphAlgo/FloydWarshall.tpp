@@ -16,9 +16,9 @@ FW algorithm
 Time Complexity: O(V^3)
 */
 template <typename V, typename W>
-std::vector<std::vector<W>> Graph<V,W>::FloydWarshall()
+auto Graph<V,W>::FloydWarshall() -> matW
 {
-    std::vector<std::vector<W>> dp = AM();
+    matW dp = AM();
 
     // Execute FW APSP algorithm
     for (int k = 0; k < numV; ++k)
@@ -62,12 +62,12 @@ std::vector<std::vector<W>> Graph<V,W>::FloydWarshall()
 // (which captures the next vertex visited during the trip from i to j)
 
 template <typename V, typename W>
-std::pair<std::vector<std::vector<W>>, std::vector<std::vector<W>>> Graph<V,W>::floyd_warshall_construct()
+auto Graph<V,W>::floyd_warshall_construct() -> pair<matW, matW>
 {
-    std::vector<std::vector<W>> dp = AM();
+    matW dp = AM();
     
     // next matrix used to reconstruct shortest paths
-    std::vector<std::vector<W>> next(numV, std::vector<W>(numV, 0));
+    matW next(numV, vectW(numV, 0));
 
     // set up next matrix
     for (int i = 0; i < numV; ++i)
@@ -121,7 +121,7 @@ std::pair<std::vector<std::vector<W>>, std::vector<std::vector<W>>> Graph<V,W>::
         }
     }
 
-    return make_pair(dp, next);
+    return {dp, next};
 }
 
 
@@ -129,10 +129,10 @@ std::pair<std::vector<std::vector<W>>, std::vector<std::vector<W>>> Graph<V,W>::
 template <typename V, typename W>
 std::optional<std::vector<V>> Graph<V,W>::fw_reconstruct_path(const V& source, const V& end)
 {
-    std::vector<V> path;
-    std::pair<std::vector<std::vector<W>>, std::vector<std::vector<W>>> dpnext = floyd_warshall_construct();
-    std::vector<std::vector<W>> dp = dpnext.first;
-    std::vector<std::vector<W>> next = dpnext.second;
+    vectV path;
+    pair<matW, matW> dpnext = floyd_warshall_construct();
+    matW dp = dpnext.first;
+    matW next = dpnext.second;
 
     W NEGATIVE_CYCLE = -1;
 

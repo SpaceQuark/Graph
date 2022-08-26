@@ -1,7 +1,7 @@
 #include <gtest/gtest.h>
 #include "../app/Graph.hpp"
 
-TEST(GraphAlgoTests, Bridges) {
+TEST(BridgeTest, Bridges) {
     Graph<int> g(false);
     g.add_edge(0, 1);
     g.add_edge(0, 2);
@@ -21,7 +21,7 @@ TEST(GraphAlgoTests, Bridges) {
 }
 
 
-TEST(GraphAlgoTests, ArticulationPoints) {
+TEST(ArticulationTests, ArticulationPoints) {
     Graph<int> g(false);
     g.add_edge(0, 1);
     g.add_edge(0, 2);

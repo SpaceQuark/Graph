@@ -18,7 +18,7 @@ set(COMPILE_FLAGS "-stdlib=libc++ -Wall -pedantic-errors -Werror -g -fstandalone
 
 project(a.out.app)
 
-file(GLOB APP_SRC_FILES ${CMAKE_SOURCE_DIR}/app/*.cpp)
+file(GLOB_RECURSE APP_SRC_FILES ${CMAKE_SOURCE_DIR}/app/*.cpp)
 
 set(APP_SRC_FILES_EXCEPT_MAIN ${APP_SRC_FILES})
 list(REMOVE_ITEM APP_SRC_FILES_EXCEPT_MAIN ${CMAKE_SOURCE_DIR}/app/main.cpp)
@@ -32,7 +32,7 @@ target_link_libraries(${PROJECT_NAME} pthread c++)
 
 project(a.out.exp)
 
-file(GLOB EXP_SRC_FILES ${CMAKE_SOURCE_DIR}/exp/*.cpp)
+file(GLOB_RECURSE EXP_SRC_FILES ${CMAKE_SOURCE_DIR}/exp/*.cpp)
 
 add_executable(${PROJECT_NAME} ${EXP_SRC_FILES} ${APP_SRC_FILES_EXCEPT_MAIN})
 set_target_properties(${PROJECT_NAME} PROPERTIES COMPILE_FLAGS ${COMPILE_FLAGS})
@@ -46,7 +46,7 @@ target_link_libraries(${PROJECT_NAME} pthread c++)
 
 project(a.out.gtest)
 
-file(GLOB GTEST_SRC_FILES ${CMAKE_SOURCE_DIR}/gtest/*.cpp)
+file(GLOB_RECURSE GTEST_SRC_FILES ${CMAKE_SOURCE_DIR}/gtest/*.cpp)
 
 find_package(GTest REQUIRED)
 include_directories(${GTEST_INCLUDE_DIRS})

@@ -25,6 +25,8 @@ as well as several algorithm implementations.
 #include <unordered_set>
 #include <stack>
 #include <queue>
+#include <list>
+// #include <bitset>
 
 
 // #include "../SupportADT/WEdge.hpp"
@@ -34,8 +36,10 @@ as well as several algorithm implementations.
 
 using std::vector;
 using std::pair;
+using std::tuple;
 using std::unordered_map;
 using std::unordered_set;
+
 
 template <typename W>
 constexpr W PINF = std::numeric_limits<W>::infinity();
@@ -45,19 +49,6 @@ constexpr W NINF = -1 * std::numeric_limits<W>::infinity();
 
 namespace
 {
-    template <typename T>
-    T min(T val1, T val2) 
-    {
-        return (val1 < val2) ? val1: val2;
-    }
-
-    template <typename T>
-    T max(T val1, T val2) 
-    {
-        return (val1 > val2) ? val1: val2;
-    }
-
-
     template <typename W>
     constexpr W gmax = std::numeric_limits<W>::max();
 
@@ -67,11 +58,6 @@ namespace
     template <typename V, typename W>
     auto minp = [](const pair<V, W>& lhs, const pair<V, W>& rhs)
     { return lhs.second > rhs.second; };
-
-    template <typename V, typename W>
-    auto maxp = [](const pair<V, W>& lhs, const pair<V, W>& rhs)
-    { return lhs.second < rhs.second; };
-
 
 }
 
@@ -85,6 +71,7 @@ public:
 
     using setV = unordered_set<V>;
 
+    using wEdge = tuple<V,V,W>;
 
 public:
     // 2 different constructors that can be called to initialize a Graph object
@@ -109,7 +96,7 @@ public:
     int total_edges() const;
 
     // outdegree of a vertex
-    int outdegree(const V& v) const;
+    pair<unordered_map<V,int>, unordered_map<V,int>> in_out_degree() const;
     
 
     inline bool is_directed() const;
@@ -122,7 +109,7 @@ public:
     matW AM();
 
     // Create Edge List
-    vector<std::tuple<V,V,W>> EL() const;
+    vector<wEdge> EL() const;
 
     // Print vertices
     void pV() const;
@@ -168,15 +155,16 @@ public:
 
     // MST
     Graph<V,W> Boruvkas();
-    pair<W, vector<pair<V,V>>> Prims(const V& source);
-    pair<W, vector<pair<V,V>>> Kruskals(const V& source);
+    pair<W, vector<wEdge>> Prims(const V& source);
+    pair<W, vector<wEdge>> Kruskals(const V& source);
     Graph<V,W> ReverseDelete();
 
 
     // Eulerian circuit
-    vectV Hierholzer();
+    std::list<V> Eulerian();
 
-    // Tree
+    // TSP (Hamiltonian circuit)
+    pair<W, vectV> TSP(const V& source);
 
     
 private:
@@ -215,5 +203,7 @@ private:
 #include "Applications/Components.tpp"
 #include "Applications/SSSPDAG.tpp"
 
+#include "GraphAlgo/TravellingSalesman.tpp"
+#include "GraphAlgo/Eulerian.tpp"
 
 #endif

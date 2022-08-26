@@ -97,10 +97,24 @@ CMakeFiles/a.out.gtest.dir/gtest/BridgesArticulationTest.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/a.out.gtest.dir/gtest/BridgesArticulationTest.cpp.s"
 	/usr/bin/clang++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/quarkz/projects/Graph/gtest/BridgesArticulationTest.cpp -o CMakeFiles/a.out.gtest.dir/gtest/BridgesArticulationTest.cpp.s
 
+CMakeFiles/a.out.gtest.dir/gtest/EulerianTest.cpp.o: CMakeFiles/a.out.gtest.dir/flags.make
+CMakeFiles/a.out.gtest.dir/gtest/EulerianTest.cpp.o: ../gtest/EulerianTest.cpp
+CMakeFiles/a.out.gtest.dir/gtest/EulerianTest.cpp.o: CMakeFiles/a.out.gtest.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/quarkz/projects/Graph/out/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/a.out.gtest.dir/gtest/EulerianTest.cpp.o"
+	/usr/bin/clang++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/a.out.gtest.dir/gtest/EulerianTest.cpp.o -MF CMakeFiles/a.out.gtest.dir/gtest/EulerianTest.cpp.o.d -o CMakeFiles/a.out.gtest.dir/gtest/EulerianTest.cpp.o -c /home/quarkz/projects/Graph/gtest/EulerianTest.cpp
+
+CMakeFiles/a.out.gtest.dir/gtest/EulerianTest.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/a.out.gtest.dir/gtest/EulerianTest.cpp.i"
+	/usr/bin/clang++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/quarkz/projects/Graph/gtest/EulerianTest.cpp > CMakeFiles/a.out.gtest.dir/gtest/EulerianTest.cpp.i
+
+CMakeFiles/a.out.gtest.dir/gtest/EulerianTest.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/a.out.gtest.dir/gtest/EulerianTest.cpp.s"
+	/usr/bin/clang++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/quarkz/projects/Graph/gtest/EulerianTest.cpp -o CMakeFiles/a.out.gtest.dir/gtest/EulerianTest.cpp.s
+
 CMakeFiles/a.out.gtest.dir/gtest/ExampleTest.cpp.o: CMakeFiles/a.out.gtest.dir/flags.make
 CMakeFiles/a.out.gtest.dir/gtest/ExampleTest.cpp.o: ../gtest/ExampleTest.cpp
 CMakeFiles/a.out.gtest.dir/gtest/ExampleTest.cpp.o: CMakeFiles/a.out.gtest.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/quarkz/projects/Graph/out/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/a.out.gtest.dir/gtest/ExampleTest.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/quarkz/projects/Graph/out/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/a.out.gtest.dir/gtest/ExampleTest.cpp.o"
 	/usr/bin/clang++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/a.out.gtest.dir/gtest/ExampleTest.cpp.o -MF CMakeFiles/a.out.gtest.dir/gtest/ExampleTest.cpp.o.d -o CMakeFiles/a.out.gtest.dir/gtest/ExampleTest.cpp.o -c /home/quarkz/projects/Graph/gtest/ExampleTest.cpp
 
 CMakeFiles/a.out.gtest.dir/gtest/ExampleTest.cpp.i: cmake_force
@@ -114,7 +128,7 @@ CMakeFiles/a.out.gtest.dir/gtest/ExampleTest.cpp.s: cmake_force
 CMakeFiles/a.out.gtest.dir/gtest/GraphTest.cpp.o: CMakeFiles/a.out.gtest.dir/flags.make
 CMakeFiles/a.out.gtest.dir/gtest/GraphTest.cpp.o: ../gtest/GraphTest.cpp
 CMakeFiles/a.out.gtest.dir/gtest/GraphTest.cpp.o: CMakeFiles/a.out.gtest.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/quarkz/projects/Graph/out/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/a.out.gtest.dir/gtest/GraphTest.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/quarkz/projects/Graph/out/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/a.out.gtest.dir/gtest/GraphTest.cpp.o"
 	/usr/bin/clang++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/a.out.gtest.dir/gtest/GraphTest.cpp.o -MF CMakeFiles/a.out.gtest.dir/gtest/GraphTest.cpp.o.d -o CMakeFiles/a.out.gtest.dir/gtest/GraphTest.cpp.o -c /home/quarkz/projects/Graph/gtest/GraphTest.cpp
 
 CMakeFiles/a.out.gtest.dir/gtest/GraphTest.cpp.i: cmake_force
@@ -128,7 +142,7 @@ CMakeFiles/a.out.gtest.dir/gtest/GraphTest.cpp.s: cmake_force
 CMakeFiles/a.out.gtest.dir/gtest/MSTTest.cpp.o: CMakeFiles/a.out.gtest.dir/flags.make
 CMakeFiles/a.out.gtest.dir/gtest/MSTTest.cpp.o: ../gtest/MSTTest.cpp
 CMakeFiles/a.out.gtest.dir/gtest/MSTTest.cpp.o: CMakeFiles/a.out.gtest.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/quarkz/projects/Graph/out/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/a.out.gtest.dir/gtest/MSTTest.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/quarkz/projects/Graph/out/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/a.out.gtest.dir/gtest/MSTTest.cpp.o"
 	/usr/bin/clang++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/a.out.gtest.dir/gtest/MSTTest.cpp.o -MF CMakeFiles/a.out.gtest.dir/gtest/MSTTest.cpp.o.d -o CMakeFiles/a.out.gtest.dir/gtest/MSTTest.cpp.o -c /home/quarkz/projects/Graph/gtest/MSTTest.cpp
 
 CMakeFiles/a.out.gtest.dir/gtest/MSTTest.cpp.i: cmake_force
@@ -142,7 +156,7 @@ CMakeFiles/a.out.gtest.dir/gtest/MSTTest.cpp.s: cmake_force
 CMakeFiles/a.out.gtest.dir/gtest/SSSPTest.cpp.o: CMakeFiles/a.out.gtest.dir/flags.make
 CMakeFiles/a.out.gtest.dir/gtest/SSSPTest.cpp.o: ../gtest/SSSPTest.cpp
 CMakeFiles/a.out.gtest.dir/gtest/SSSPTest.cpp.o: CMakeFiles/a.out.gtest.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/quarkz/projects/Graph/out/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/a.out.gtest.dir/gtest/SSSPTest.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/quarkz/projects/Graph/out/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/a.out.gtest.dir/gtest/SSSPTest.cpp.o"
 	/usr/bin/clang++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/a.out.gtest.dir/gtest/SSSPTest.cpp.o -MF CMakeFiles/a.out.gtest.dir/gtest/SSSPTest.cpp.o.d -o CMakeFiles/a.out.gtest.dir/gtest/SSSPTest.cpp.o -c /home/quarkz/projects/Graph/gtest/SSSPTest.cpp
 
 CMakeFiles/a.out.gtest.dir/gtest/SSSPTest.cpp.i: cmake_force
@@ -156,7 +170,7 @@ CMakeFiles/a.out.gtest.dir/gtest/SSSPTest.cpp.s: cmake_force
 CMakeFiles/a.out.gtest.dir/gtest/SearchTest.cpp.o: CMakeFiles/a.out.gtest.dir/flags.make
 CMakeFiles/a.out.gtest.dir/gtest/SearchTest.cpp.o: ../gtest/SearchTest.cpp
 CMakeFiles/a.out.gtest.dir/gtest/SearchTest.cpp.o: CMakeFiles/a.out.gtest.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/quarkz/projects/Graph/out/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/a.out.gtest.dir/gtest/SearchTest.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/quarkz/projects/Graph/out/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/a.out.gtest.dir/gtest/SearchTest.cpp.o"
 	/usr/bin/clang++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/a.out.gtest.dir/gtest/SearchTest.cpp.o -MF CMakeFiles/a.out.gtest.dir/gtest/SearchTest.cpp.o.d -o CMakeFiles/a.out.gtest.dir/gtest/SearchTest.cpp.o -c /home/quarkz/projects/Graph/gtest/SearchTest.cpp
 
 CMakeFiles/a.out.gtest.dir/gtest/SearchTest.cpp.i: cmake_force
@@ -167,10 +181,24 @@ CMakeFiles/a.out.gtest.dir/gtest/SearchTest.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/a.out.gtest.dir/gtest/SearchTest.cpp.s"
 	/usr/bin/clang++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/quarkz/projects/Graph/gtest/SearchTest.cpp -o CMakeFiles/a.out.gtest.dir/gtest/SearchTest.cpp.s
 
+CMakeFiles/a.out.gtest.dir/gtest/TSPTest.cpp.o: CMakeFiles/a.out.gtest.dir/flags.make
+CMakeFiles/a.out.gtest.dir/gtest/TSPTest.cpp.o: ../gtest/TSPTest.cpp
+CMakeFiles/a.out.gtest.dir/gtest/TSPTest.cpp.o: CMakeFiles/a.out.gtest.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/quarkz/projects/Graph/out/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/a.out.gtest.dir/gtest/TSPTest.cpp.o"
+	/usr/bin/clang++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/a.out.gtest.dir/gtest/TSPTest.cpp.o -MF CMakeFiles/a.out.gtest.dir/gtest/TSPTest.cpp.o.d -o CMakeFiles/a.out.gtest.dir/gtest/TSPTest.cpp.o -c /home/quarkz/projects/Graph/gtest/TSPTest.cpp
+
+CMakeFiles/a.out.gtest.dir/gtest/TSPTest.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/a.out.gtest.dir/gtest/TSPTest.cpp.i"
+	/usr/bin/clang++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/quarkz/projects/Graph/gtest/TSPTest.cpp > CMakeFiles/a.out.gtest.dir/gtest/TSPTest.cpp.i
+
+CMakeFiles/a.out.gtest.dir/gtest/TSPTest.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/a.out.gtest.dir/gtest/TSPTest.cpp.s"
+	/usr/bin/clang++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/quarkz/projects/Graph/gtest/TSPTest.cpp -o CMakeFiles/a.out.gtest.dir/gtest/TSPTest.cpp.s
+
 CMakeFiles/a.out.gtest.dir/gtest/TopSortTest.cpp.o: CMakeFiles/a.out.gtest.dir/flags.make
 CMakeFiles/a.out.gtest.dir/gtest/TopSortTest.cpp.o: ../gtest/TopSortTest.cpp
 CMakeFiles/a.out.gtest.dir/gtest/TopSortTest.cpp.o: CMakeFiles/a.out.gtest.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/quarkz/projects/Graph/out/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/a.out.gtest.dir/gtest/TopSortTest.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/quarkz/projects/Graph/out/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/a.out.gtest.dir/gtest/TopSortTest.cpp.o"
 	/usr/bin/clang++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/a.out.gtest.dir/gtest/TopSortTest.cpp.o -MF CMakeFiles/a.out.gtest.dir/gtest/TopSortTest.cpp.o.d -o CMakeFiles/a.out.gtest.dir/gtest/TopSortTest.cpp.o -c /home/quarkz/projects/Graph/gtest/TopSortTest.cpp
 
 CMakeFiles/a.out.gtest.dir/gtest/TopSortTest.cpp.i: cmake_force
@@ -184,7 +212,7 @@ CMakeFiles/a.out.gtest.dir/gtest/TopSortTest.cpp.s: cmake_force
 CMakeFiles/a.out.gtest.dir/gtest/gtestmain.cpp.o: CMakeFiles/a.out.gtest.dir/flags.make
 CMakeFiles/a.out.gtest.dir/gtest/gtestmain.cpp.o: ../gtest/gtestmain.cpp
 CMakeFiles/a.out.gtest.dir/gtest/gtestmain.cpp.o: CMakeFiles/a.out.gtest.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/quarkz/projects/Graph/out/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/a.out.gtest.dir/gtest/gtestmain.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/quarkz/projects/Graph/out/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/a.out.gtest.dir/gtest/gtestmain.cpp.o"
 	/usr/bin/clang++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/a.out.gtest.dir/gtest/gtestmain.cpp.o -MF CMakeFiles/a.out.gtest.dir/gtest/gtestmain.cpp.o.d -o CMakeFiles/a.out.gtest.dir/gtest/gtestmain.cpp.o -c /home/quarkz/projects/Graph/gtest/gtestmain.cpp
 
 CMakeFiles/a.out.gtest.dir/gtest/gtestmain.cpp.i: cmake_force
@@ -199,11 +227,13 @@ CMakeFiles/a.out.gtest.dir/gtest/gtestmain.cpp.s: cmake_force
 a_out_gtest_OBJECTS = \
 "CMakeFiles/a.out.gtest.dir/gtest/APSPTest.cpp.o" \
 "CMakeFiles/a.out.gtest.dir/gtest/BridgesArticulationTest.cpp.o" \
+"CMakeFiles/a.out.gtest.dir/gtest/EulerianTest.cpp.o" \
 "CMakeFiles/a.out.gtest.dir/gtest/ExampleTest.cpp.o" \
 "CMakeFiles/a.out.gtest.dir/gtest/GraphTest.cpp.o" \
 "CMakeFiles/a.out.gtest.dir/gtest/MSTTest.cpp.o" \
 "CMakeFiles/a.out.gtest.dir/gtest/SSSPTest.cpp.o" \
 "CMakeFiles/a.out.gtest.dir/gtest/SearchTest.cpp.o" \
+"CMakeFiles/a.out.gtest.dir/gtest/TSPTest.cpp.o" \
 "CMakeFiles/a.out.gtest.dir/gtest/TopSortTest.cpp.o" \
 "CMakeFiles/a.out.gtest.dir/gtest/gtestmain.cpp.o"
 
@@ -212,17 +242,19 @@ a_out_gtest_EXTERNAL_OBJECTS =
 
 bin/a.out.gtest: CMakeFiles/a.out.gtest.dir/gtest/APSPTest.cpp.o
 bin/a.out.gtest: CMakeFiles/a.out.gtest.dir/gtest/BridgesArticulationTest.cpp.o
+bin/a.out.gtest: CMakeFiles/a.out.gtest.dir/gtest/EulerianTest.cpp.o
 bin/a.out.gtest: CMakeFiles/a.out.gtest.dir/gtest/ExampleTest.cpp.o
 bin/a.out.gtest: CMakeFiles/a.out.gtest.dir/gtest/GraphTest.cpp.o
 bin/a.out.gtest: CMakeFiles/a.out.gtest.dir/gtest/MSTTest.cpp.o
 bin/a.out.gtest: CMakeFiles/a.out.gtest.dir/gtest/SSSPTest.cpp.o
 bin/a.out.gtest: CMakeFiles/a.out.gtest.dir/gtest/SearchTest.cpp.o
+bin/a.out.gtest: CMakeFiles/a.out.gtest.dir/gtest/TSPTest.cpp.o
 bin/a.out.gtest: CMakeFiles/a.out.gtest.dir/gtest/TopSortTest.cpp.o
 bin/a.out.gtest: CMakeFiles/a.out.gtest.dir/gtest/gtestmain.cpp.o
 bin/a.out.gtest: CMakeFiles/a.out.gtest.dir/build.make
 bin/a.out.gtest: /usr/lib/x86_64-linux-gnu/libgtest.a
 bin/a.out.gtest: CMakeFiles/a.out.gtest.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/quarkz/projects/Graph/out/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable bin/a.out.gtest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/quarkz/projects/Graph/out/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable bin/a.out.gtest"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/a.out.gtest.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

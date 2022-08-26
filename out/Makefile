@@ -155,32 +155,32 @@ a.out.gtest/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.gtest.dir/build.make CMakeFiles/a.out.gtest.dir/build
 .PHONY : a.out.gtest/fast
 
-app/UnionFind.o: app/UnionFind.cpp.o
-.PHONY : app/UnionFind.o
+app/Support/UnionFind.o: app/Support/UnionFind.cpp.o
+.PHONY : app/Support/UnionFind.o
 
 # target to build an object file
-app/UnionFind.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.app.dir/build.make CMakeFiles/a.out.app.dir/app/UnionFind.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.exp.dir/build.make CMakeFiles/a.out.exp.dir/app/UnionFind.cpp.o
-.PHONY : app/UnionFind.cpp.o
+app/Support/UnionFind.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.app.dir/build.make CMakeFiles/a.out.app.dir/app/Support/UnionFind.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.exp.dir/build.make CMakeFiles/a.out.exp.dir/app/Support/UnionFind.cpp.o
+.PHONY : app/Support/UnionFind.cpp.o
 
-app/UnionFind.i: app/UnionFind.cpp.i
-.PHONY : app/UnionFind.i
+app/Support/UnionFind.i: app/Support/UnionFind.cpp.i
+.PHONY : app/Support/UnionFind.i
 
 # target to preprocess a source file
-app/UnionFind.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.app.dir/build.make CMakeFiles/a.out.app.dir/app/UnionFind.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.exp.dir/build.make CMakeFiles/a.out.exp.dir/app/UnionFind.cpp.i
-.PHONY : app/UnionFind.cpp.i
+app/Support/UnionFind.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.app.dir/build.make CMakeFiles/a.out.app.dir/app/Support/UnionFind.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.exp.dir/build.make CMakeFiles/a.out.exp.dir/app/Support/UnionFind.cpp.i
+.PHONY : app/Support/UnionFind.cpp.i
 
-app/UnionFind.s: app/UnionFind.cpp.s
-.PHONY : app/UnionFind.s
+app/Support/UnionFind.s: app/Support/UnionFind.cpp.s
+.PHONY : app/Support/UnionFind.s
 
 # target to generate assembly for a file
-app/UnionFind.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.app.dir/build.make CMakeFiles/a.out.app.dir/app/UnionFind.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.exp.dir/build.make CMakeFiles/a.out.exp.dir/app/UnionFind.cpp.s
-.PHONY : app/UnionFind.cpp.s
+app/Support/UnionFind.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.app.dir/build.make CMakeFiles/a.out.app.dir/app/Support/UnionFind.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.exp.dir/build.make CMakeFiles/a.out.exp.dir/app/Support/UnionFind.cpp.s
+.PHONY : app/Support/UnionFind.cpp.s
 
 app/main.o: app/main.cpp.o
 .PHONY : app/main.o
@@ -302,6 +302,30 @@ gtest/BridgesArticulationTest.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.gtest.dir/build.make CMakeFiles/a.out.gtest.dir/gtest/BridgesArticulationTest.cpp.s
 .PHONY : gtest/BridgesArticulationTest.cpp.s
 
+gtest/EulerianTest.o: gtest/EulerianTest.cpp.o
+.PHONY : gtest/EulerianTest.o
+
+# target to build an object file
+gtest/EulerianTest.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.gtest.dir/build.make CMakeFiles/a.out.gtest.dir/gtest/EulerianTest.cpp.o
+.PHONY : gtest/EulerianTest.cpp.o
+
+gtest/EulerianTest.i: gtest/EulerianTest.cpp.i
+.PHONY : gtest/EulerianTest.i
+
+# target to preprocess a source file
+gtest/EulerianTest.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.gtest.dir/build.make CMakeFiles/a.out.gtest.dir/gtest/EulerianTest.cpp.i
+.PHONY : gtest/EulerianTest.cpp.i
+
+gtest/EulerianTest.s: gtest/EulerianTest.cpp.s
+.PHONY : gtest/EulerianTest.s
+
+# target to generate assembly for a file
+gtest/EulerianTest.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.gtest.dir/build.make CMakeFiles/a.out.gtest.dir/gtest/EulerianTest.cpp.s
+.PHONY : gtest/EulerianTest.cpp.s
+
 gtest/ExampleTest.o: gtest/ExampleTest.cpp.o
 .PHONY : gtest/ExampleTest.o
 
@@ -422,6 +446,30 @@ gtest/SearchTest.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.gtest.dir/build.make CMakeFiles/a.out.gtest.dir/gtest/SearchTest.cpp.s
 .PHONY : gtest/SearchTest.cpp.s
 
+gtest/TSPTest.o: gtest/TSPTest.cpp.o
+.PHONY : gtest/TSPTest.o
+
+# target to build an object file
+gtest/TSPTest.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.gtest.dir/build.make CMakeFiles/a.out.gtest.dir/gtest/TSPTest.cpp.o
+.PHONY : gtest/TSPTest.cpp.o
+
+gtest/TSPTest.i: gtest/TSPTest.cpp.i
+.PHONY : gtest/TSPTest.i
+
+# target to preprocess a source file
+gtest/TSPTest.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.gtest.dir/build.make CMakeFiles/a.out.gtest.dir/gtest/TSPTest.cpp.i
+.PHONY : gtest/TSPTest.cpp.i
+
+gtest/TSPTest.s: gtest/TSPTest.cpp.s
+.PHONY : gtest/TSPTest.s
+
+# target to generate assembly for a file
+gtest/TSPTest.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.gtest.dir/build.make CMakeFiles/a.out.gtest.dir/gtest/TSPTest.cpp.s
+.PHONY : gtest/TSPTest.cpp.s
+
 gtest/TopSortTest.o: gtest/TopSortTest.cpp.o
 .PHONY : gtest/TopSortTest.o
 
@@ -481,9 +529,9 @@ help:
 	@echo "... a.out.app"
 	@echo "... a.out.exp"
 	@echo "... a.out.gtest"
-	@echo "... app/UnionFind.o"
-	@echo "... app/UnionFind.i"
-	@echo "... app/UnionFind.s"
+	@echo "... app/Support/UnionFind.o"
+	@echo "... app/Support/UnionFind.i"
+	@echo "... app/Support/UnionFind.s"
 	@echo "... app/main.o"
 	@echo "... app/main.i"
 	@echo "... app/main.s"
@@ -499,6 +547,9 @@ help:
 	@echo "... gtest/BridgesArticulationTest.o"
 	@echo "... gtest/BridgesArticulationTest.i"
 	@echo "... gtest/BridgesArticulationTest.s"
+	@echo "... gtest/EulerianTest.o"
+	@echo "... gtest/EulerianTest.i"
+	@echo "... gtest/EulerianTest.s"
 	@echo "... gtest/ExampleTest.o"
 	@echo "... gtest/ExampleTest.i"
 	@echo "... gtest/ExampleTest.s"
@@ -514,6 +565,9 @@ help:
 	@echo "... gtest/SearchTest.o"
 	@echo "... gtest/SearchTest.i"
 	@echo "... gtest/SearchTest.s"
+	@echo "... gtest/TSPTest.o"
+	@echo "... gtest/TSPTest.i"
+	@echo "... gtest/TSPTest.s"
 	@echo "... gtest/TopSortTest.o"
 	@echo "... gtest/TopSortTest.i"
 	@echo "... gtest/TopSortTest.s"

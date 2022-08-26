@@ -15,11 +15,11 @@ TEST(GraphAlgoTests, TopSort) {
 
     
     std::vector<int> ts = g.top_sort();
-    std::vector<int> res{0, 5, 1, 2, 3, 4};
+    std::vector<int> res{0, 1, 2, 5, 3, 4};
     
     // Under Construction -- several topological sorts exists
 
-    // EXPECT_EQ(ts, res);
+    EXPECT_EQ(ts, res);
 }
 
 

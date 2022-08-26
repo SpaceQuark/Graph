@@ -1,6 +1,9 @@
-CMakeFiles/a.out.app.dir/app/main.cpp.o: \
-  /home/quarkz/projects/Graph/app/main.cpp \
-  /usr/lib/llvm-14/bin/../include/c++/v1/iostream \
+CMakeFiles/a.out.app.dir/app/Support/UnionFind.cpp.o: \
+  /home/quarkz/projects/Graph/app/Support/UnionFind.cpp \
+  /home/quarkz/projects/Graph/app/Support/UnionFind.hpp \
+  /usr/lib/llvm-14/bin/../include/c++/v1/vector \
+  /usr/lib/llvm-14/bin/../include/c++/v1/__bit_reference \
+  /usr/lib/llvm-14/bin/../include/c++/v1/__bits \
   /usr/lib/llvm-14/bin/../include/c++/v1/__config \
   /usr/lib/llvm-14/bin/../include/c++/v1/__config_site \
   /usr/include/features.h /usr/include/features-time64.h \
@@ -10,97 +13,77 @@ CMakeFiles/a.out.app.dir/app/main.cpp.o: \
   /usr/include/x86_64-linux-gnu/bits/long-double.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
-  /usr/lib/llvm-14/bin/../include/c++/v1/ios \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__locale \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__availability \
-  /usr/lib/llvm-14/bin/../include/c++/v1/cctype \
-  /usr/lib/llvm-14/bin/../include/c++/v1/ctype.h /usr/include/ctype.h \
-  /usr/include/x86_64-linux-gnu/bits/types.h \
-  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
-  /usr/include/x86_64-linux-gnu/bits/time64.h \
-  /usr/include/x86_64-linux-gnu/bits/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endianness.h \
-  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
-  /usr/lib/llvm-14/bin/../include/c++/v1/cstdint \
-  /usr/lib/llvm-14/bin/../include/c++/v1/stdint.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdint.h \
-  /usr/include/stdint.h \
-  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
-  /usr/include/x86_64-linux-gnu/bits/wchar.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
-  /usr/lib/llvm-14/bin/../include/c++/v1/locale.h /usr/include/locale.h \
-  /usr/lib/llvm-14/bin/../include/c++/v1/stddef.h \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/stddef.h \
-  /usr/include/x86_64-linux-gnu/bits/locale.h \
-  /usr/lib/llvm-14/bin/../include/c++/v1/memory \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__functional_base \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__functional/binary_function.h \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__functional/invoke.h \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__functional/weak_result_type.h \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__functional/unary_function.h \
-  /usr/lib/llvm-14/bin/../include/c++/v1/type_traits \
-  /usr/lib/llvm-14/bin/../include/c++/v1/cstddef \
-  /usr/lib/llvm-14/bin/../include/c++/v1/version \
-  /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__nullptr \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__utility/forward.h \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__functional/operations.h \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__functional/reference_wrapper.h \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__memory/addressof.h \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__memory/allocator_arg_t.h \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__memory/uses_allocator.h \
-  /usr/lib/llvm-14/bin/../include/c++/v1/exception \
-  /usr/lib/llvm-14/bin/../include/c++/v1/cstdlib \
-  /usr/lib/llvm-14/bin/../include/c++/v1/stdlib.h /usr/include/stdlib.h \
-  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
-  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/sys/types.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
-  /usr/include/endian.h /usr/include/x86_64-linux-gnu/bits/byteswap.h \
-  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
-  /usr/include/x86_64-linux-gnu/sys/select.h \
-  /usr/include/x86_64-linux-gnu/bits/select.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
-  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
-  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
-  /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
-  /usr/lib/llvm-14/bin/../include/c++/v1/new \
-  /usr/lib/llvm-14/bin/../include/c++/v1/typeinfo \
-  /usr/lib/llvm-14/bin/../include/c++/v1/utility \
+  /usr/lib/llvm-14/bin/../include/c++/v1/__undef_macros \
+  /usr/lib/llvm-14/bin/../include/c++/v1/algorithm \
   /usr/lib/llvm-14/bin/../include/c++/v1/__debug \
   /usr/lib/llvm-14/bin/../include/c++/v1/iosfwd \
   /usr/lib/llvm-14/bin/../include/c++/v1/__mbstate_t.h \
-  /usr/lib/llvm-14/bin/../include/c++/v1/wchar.h /usr/include/wchar.h \
+  /usr/lib/llvm-14/bin/../include/c++/v1/wchar.h \
+  /usr/lib/llvm-14/bin/../include/c++/v1/stddef.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/stddef.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h \
+  /usr/lib/llvm-14/bin/../include/c++/v1/__nullptr /usr/include/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/floatn.h \
+  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/stdarg.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar.h \
   /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
+  /usr/lib/llvm-14/bin/../include/c++/v1/version \
+  /usr/lib/llvm-14/bin/../include/c++/v1/type_traits \
+  /usr/lib/llvm-14/bin/../include/c++/v1/cstddef \
+  /usr/lib/llvm-14/bin/../include/c++/v1/cstring \
+  /usr/lib/llvm-14/bin/../include/c++/v1/string.h /usr/include/string.h \
+  /usr/include/strings.h \
+  /usr/lib/llvm-14/bin/../include/c++/v1/functional \
+  /usr/lib/llvm-14/bin/../include/c++/v1/__algorithm/search.h \
+  /usr/lib/llvm-14/bin/../include/c++/v1/__algorithm/comp.h \
+  /usr/lib/llvm-14/bin/../include/c++/v1/__iterator/iterator_traits.h \
+  /usr/lib/llvm-14/bin/../include/c++/v1/__iterator/incrementable_traits.h \
+  /usr/lib/llvm-14/bin/../include/c++/v1/concepts \
+  /usr/lib/llvm-14/bin/../include/c++/v1/__concepts/arithmetic.h \
+  /usr/lib/llvm-14/bin/../include/c++/v1/__concepts/assignable.h \
+  /usr/lib/llvm-14/bin/../include/c++/v1/__concepts/common_reference_with.h \
+  /usr/lib/llvm-14/bin/../include/c++/v1/__concepts/convertible_to.h \
+  /usr/lib/llvm-14/bin/../include/c++/v1/__utility/declval.h \
+  /usr/lib/llvm-14/bin/../include/c++/v1/__concepts/same_as.h \
+  /usr/lib/llvm-14/bin/../include/c++/v1/__utility/forward.h \
+  /usr/lib/llvm-14/bin/../include/c++/v1/__concepts/boolean_testable.h \
+  /usr/lib/llvm-14/bin/../include/c++/v1/__concepts/class_or_enum.h \
+  /usr/lib/llvm-14/bin/../include/c++/v1/__concepts/common_with.h \
+  /usr/lib/llvm-14/bin/../include/c++/v1/__concepts/constructible.h \
+  /usr/lib/llvm-14/bin/../include/c++/v1/__concepts/destructible.h \
+  /usr/lib/llvm-14/bin/../include/c++/v1/__concepts/copyable.h \
+  /usr/lib/llvm-14/bin/../include/c++/v1/__concepts/movable.h \
+  /usr/lib/llvm-14/bin/../include/c++/v1/__concepts/swappable.h \
+  /usr/lib/llvm-14/bin/../include/c++/v1/__utility/exchange.h \
+  /usr/lib/llvm-14/bin/../include/c++/v1/__utility/move.h \
+  /usr/lib/llvm-14/bin/../include/c++/v1/__concepts/derived_from.h \
+  /usr/lib/llvm-14/bin/../include/c++/v1/__concepts/different_from.h \
+  /usr/lib/llvm-14/bin/../include/c++/v1/__concepts/equality_comparable.h \
+  /usr/lib/llvm-14/bin/../include/c++/v1/__concepts/invocable.h \
+  /usr/lib/llvm-14/bin/../include/c++/v1/__functional/invoke.h \
+  /usr/lib/llvm-14/bin/../include/c++/v1/__functional/weak_result_type.h \
+  /usr/lib/llvm-14/bin/../include/c++/v1/__functional/binary_function.h \
+  /usr/lib/llvm-14/bin/../include/c++/v1/__functional/unary_function.h \
+  /usr/lib/llvm-14/bin/../include/c++/v1/__concepts/predicate.h \
+  /usr/lib/llvm-14/bin/../include/c++/v1/__concepts/regular.h \
+  /usr/lib/llvm-14/bin/../include/c++/v1/__concepts/semiregular.h \
+  /usr/lib/llvm-14/bin/../include/c++/v1/__concepts/relation.h \
+  /usr/lib/llvm-14/bin/../include/c++/v1/__concepts/totally_ordered.h \
+  /usr/lib/llvm-14/bin/../include/c++/v1/__iterator/readable_traits.h \
+  /usr/lib/llvm-14/bin/../include/c++/v1/utility \
   /usr/lib/llvm-14/bin/../include/c++/v1/__tuple \
   /usr/lib/llvm-14/bin/../include/c++/v1/__utility/as_const.h \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__utility/move.h \
   /usr/lib/llvm-14/bin/../include/c++/v1/__utility/auto_cast.h \
   /usr/lib/llvm-14/bin/../include/c++/v1/__utility/cmp.h \
   /usr/lib/llvm-14/bin/../include/c++/v1/limits \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__undef_macros \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__utility/declval.h \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__utility/exchange.h \
   /usr/lib/llvm-14/bin/../include/c++/v1/__utility/in_place.h \
   /usr/lib/llvm-14/bin/../include/c++/v1/__utility/integer_sequence.h \
   /usr/lib/llvm-14/bin/../include/c++/v1/__utility/pair.h \
@@ -108,12 +91,6 @@ CMakeFiles/a.out.app.dir/app/main.cpp.o: \
   /usr/lib/llvm-14/bin/../include/c++/v1/__compare/ordering.h \
   /usr/lib/llvm-14/bin/../include/c++/v1/__compare/synth_three_way.h \
   /usr/lib/llvm-14/bin/../include/c++/v1/__compare/three_way_comparable.h \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__concepts/common_reference_with.h \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__concepts/convertible_to.h \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__concepts/same_as.h \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__concepts/equality_comparable.h \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__concepts/boolean_testable.h \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__concepts/totally_ordered.h \
   /usr/lib/llvm-14/bin/../include/c++/v1/__functional/unwrap_ref.h \
   /usr/lib/llvm-14/bin/../include/c++/v1/__utility/piecewise_construct.h \
   /usr/lib/llvm-14/bin/../include/c++/v1/__utility/priority_tag.h \
@@ -130,6 +107,9 @@ CMakeFiles/a.out.app.dir/app/main.cpp.o: \
   /usr/lib/llvm-14/bin/../include/c++/v1/__bit/bit_cast.h \
   /usr/lib/llvm-14/bin/../include/c++/v1/cmath \
   /usr/lib/llvm-14/bin/../include/c++/v1/math.h /usr/include/math.h \
+  /usr/include/x86_64-linux-gnu/bits/types.h \
+  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
+  /usr/include/x86_64-linux-gnu/bits/time64.h \
   /usr/include/x86_64-linux-gnu/bits/math-vector.h \
   /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
   /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
@@ -139,93 +119,77 @@ CMakeFiles/a.out.app.dir/app/main.cpp.o: \
   /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
   /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
   /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
+  /usr/lib/llvm-14/bin/../include/c++/v1/stdlib.h /usr/include/stdlib.h \
+  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+  /usr/include/x86_64-linux-gnu/sys/types.h \
+  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h /usr/include/endian.h \
+  /usr/include/x86_64-linux-gnu/bits/endian.h \
+  /usr/include/x86_64-linux-gnu/bits/endianness.h \
+  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
+  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
+  /usr/include/x86_64-linux-gnu/sys/select.h \
+  /usr/include/x86_64-linux-gnu/bits/select.h \
+  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
+  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
+  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
+  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
+  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
+  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
+  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
+  /usr/include/alloca.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+  /usr/lib/llvm-14/bin/../include/c++/v1/cstdint \
+  /usr/lib/llvm-14/bin/../include/c++/v1/stdint.h \
+  /usr/lib/llvm-14/lib/clang/14.0.0/include/stdint.h \
+  /usr/include/stdint.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
   /usr/lib/llvm-14/bin/../include/c++/v1/__compare/compare_strong_order_fallback.h \
   /usr/lib/llvm-14/bin/../include/c++/v1/__compare/compare_three_way_result.h \
   /usr/lib/llvm-14/bin/../include/c++/v1/__compare/compare_weak_order_fallback.h \
   /usr/lib/llvm-14/bin/../include/c++/v1/__compare/is_eq.h \
   /usr/lib/llvm-14/bin/../include/c++/v1/initializer_list \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__memory/allocation_guard.h \
+  /usr/lib/llvm-14/bin/../include/c++/v1/__functional/binary_negate.h \
+  /usr/lib/llvm-14/bin/../include/c++/v1/__functional/bind.h \
+  /usr/lib/llvm-14/bin/../include/c++/v1/tuple \
+  /usr/lib/llvm-14/bin/../include/c++/v1/__functional_base \
+  /usr/lib/llvm-14/bin/../include/c++/v1/__functional/operations.h \
+  /usr/lib/llvm-14/bin/../include/c++/v1/__functional/reference_wrapper.h \
+  /usr/lib/llvm-14/bin/../include/c++/v1/__memory/addressof.h \
+  /usr/lib/llvm-14/bin/../include/c++/v1/__memory/allocator_arg_t.h \
+  /usr/lib/llvm-14/bin/../include/c++/v1/__memory/uses_allocator.h \
+  /usr/lib/llvm-14/bin/../include/c++/v1/exception \
+  /usr/lib/llvm-14/bin/../include/c++/v1/__availability \
+  /usr/lib/llvm-14/bin/../include/c++/v1/cstdlib \
+  /usr/lib/llvm-14/bin/../include/c++/v1/new \
+  /usr/lib/llvm-14/bin/../include/c++/v1/typeinfo \
+  /usr/lib/llvm-14/bin/../include/c++/v1/__functional/bind_back.h \
+  /usr/lib/llvm-14/bin/../include/c++/v1/__functional/perfect_forward.h \
+  /usr/lib/llvm-14/bin/../include/c++/v1/__functional/bind_front.h \
+  /usr/lib/llvm-14/bin/../include/c++/v1/__functional/binder1st.h \
+  /usr/lib/llvm-14/bin/../include/c++/v1/__functional/binder2nd.h \
+  /usr/lib/llvm-14/bin/../include/c++/v1/__functional/compose.h \
+  /usr/lib/llvm-14/bin/../include/c++/v1/__functional/default_searcher.h \
+  /usr/lib/llvm-14/bin/../include/c++/v1/__functional/function.h \
   /usr/lib/llvm-14/bin/../include/c++/v1/__memory/allocator_traits.h \
   /usr/lib/llvm-14/bin/../include/c++/v1/__memory/construct_at.h \
   /usr/lib/llvm-14/bin/../include/c++/v1/__iterator/access.h \
   /usr/lib/llvm-14/bin/../include/c++/v1/__memory/voidify.h \
   /usr/lib/llvm-14/bin/../include/c++/v1/__memory/pointer_traits.h \
+  /usr/lib/llvm-14/bin/../include/c++/v1/__memory/compressed_pair.h \
+  /usr/lib/llvm-14/bin/../include/c++/v1/__memory/shared_ptr.h \
+  /usr/lib/llvm-14/bin/../include/c++/v1/__memory/allocation_guard.h \
   /usr/lib/llvm-14/bin/../include/c++/v1/__memory/allocator.h \
   /usr/lib/llvm-14/bin/../include/c++/v1/stdexcept \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__memory/compressed_pair.h \
-  /usr/lib/llvm-14/bin/../include/c++/v1/tuple \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__memory/concepts.h \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__iterator/concepts.h \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__iterator/incrementable_traits.h \
-  /usr/lib/llvm-14/bin/../include/c++/v1/concepts \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__concepts/arithmetic.h \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__concepts/assignable.h \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__concepts/class_or_enum.h \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__concepts/common_with.h \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__concepts/constructible.h \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__concepts/destructible.h \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__concepts/copyable.h \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__concepts/movable.h \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__concepts/swappable.h \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__concepts/derived_from.h \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__concepts/different_from.h \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__concepts/invocable.h \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__concepts/predicate.h \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__concepts/regular.h \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__concepts/semiregular.h \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__concepts/relation.h \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__iterator/iter_move.h \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__iterator/iterator_traits.h \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__iterator/readable_traits.h \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__ranges/access.h \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__ranges/enable_borrowed_range.h \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__ranges/concepts.h \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__ranges/data.h \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__ranges/enable_view.h \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__ranges/size.h \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__memory/ranges_construct_at.h \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__ranges/dangling.h \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__memory/ranges_uninitialized_algorithms.h \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__algorithm/in_out_result.h \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__memory/uninitialized_algorithms.h \
-  /usr/lib/llvm-14/bin/../include/c++/v1/iterator \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__iterator/advance.h \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__iterator/back_insert_iterator.h \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__iterator/iterator.h \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__iterator/common_iterator.h \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__iterator/iter_swap.h \
-  /usr/lib/llvm-14/bin/../include/c++/v1/variant \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__functional/hash.h \
-  /usr/lib/llvm-14/bin/../include/c++/v1/cstring \
-  /usr/lib/llvm-14/bin/../include/c++/v1/string.h /usr/include/string.h \
-  /usr/include/strings.h \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__variant/monostate.h \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__iterator/counted_iterator.h \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__iterator/default_sentinel.h \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__iterator/data.h \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__iterator/distance.h \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__iterator/empty.h \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__iterator/erase_if_container.h \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__iterator/front_insert_iterator.h \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__iterator/indirectly_comparable.h \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__functional/identity.h \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__iterator/projected.h \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__iterator/insert_iterator.h \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__iterator/istream_iterator.h \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__iterator/istreambuf_iterator.h \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__iterator/move_iterator.h \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__iterator/next.h \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__iterator/ostream_iterator.h \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__iterator/ostreambuf_iterator.h \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__iterator/prev.h \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__iterator/reverse_access.h \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__iterator/reverse_iterator.h \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__iterator/size.h \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__iterator/unreachable_sentinel.h \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__iterator/wrap_iter.h \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__memory/raw_storage_iterator.h \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__memory/shared_ptr.h \
   /usr/lib/llvm-14/bin/../include/c++/v1/__memory/unique_ptr.h \
+  /usr/lib/llvm-14/bin/../include/c++/v1/__functional/hash.h \
   /usr/lib/llvm-14/bin/../include/c++/v1/atomic \
   /usr/lib/llvm-14/bin/../include/c++/v1/__thread/poll_with_backoff.h \
   /usr/lib/llvm-14/bin/../include/c++/v1/chrono \
@@ -266,28 +230,54 @@ CMakeFiles/a.out.app.dir/app/main.cpp.o: \
   /usr/include/x86_64-linux-gnu/bits/cpu-set.h \
   /usr/include/x86_64-linux-gnu/bits/setjmp.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h \
+  /usr/lib/llvm-14/bin/../include/c++/v1/memory \
+  /usr/lib/llvm-14/bin/../include/c++/v1/__memory/concepts.h \
+  /usr/lib/llvm-14/bin/../include/c++/v1/__iterator/concepts.h \
+  /usr/lib/llvm-14/bin/../include/c++/v1/__iterator/iter_move.h \
+  /usr/lib/llvm-14/bin/../include/c++/v1/__ranges/access.h \
+  /usr/lib/llvm-14/bin/../include/c++/v1/__ranges/enable_borrowed_range.h \
+  /usr/lib/llvm-14/bin/../include/c++/v1/__ranges/concepts.h \
+  /usr/lib/llvm-14/bin/../include/c++/v1/__ranges/data.h \
+  /usr/lib/llvm-14/bin/../include/c++/v1/__ranges/enable_view.h \
+  /usr/lib/llvm-14/bin/../include/c++/v1/__ranges/size.h \
+  /usr/lib/llvm-14/bin/../include/c++/v1/__memory/ranges_construct_at.h \
+  /usr/lib/llvm-14/bin/../include/c++/v1/__ranges/dangling.h \
+  /usr/lib/llvm-14/bin/../include/c++/v1/__memory/ranges_uninitialized_algorithms.h \
+  /usr/lib/llvm-14/bin/../include/c++/v1/__algorithm/in_out_result.h \
+  /usr/lib/llvm-14/bin/../include/c++/v1/__memory/uninitialized_algorithms.h \
+  /usr/lib/llvm-14/bin/../include/c++/v1/iterator \
+  /usr/lib/llvm-14/bin/../include/c++/v1/__iterator/advance.h \
+  /usr/lib/llvm-14/bin/../include/c++/v1/__iterator/back_insert_iterator.h \
+  /usr/lib/llvm-14/bin/../include/c++/v1/__iterator/iterator.h \
+  /usr/lib/llvm-14/bin/../include/c++/v1/__iterator/common_iterator.h \
+  /usr/lib/llvm-14/bin/../include/c++/v1/__iterator/iter_swap.h \
+  /usr/lib/llvm-14/bin/../include/c++/v1/variant \
+  /usr/lib/llvm-14/bin/../include/c++/v1/__variant/monostate.h \
+  /usr/lib/llvm-14/bin/../include/c++/v1/__iterator/counted_iterator.h \
+  /usr/lib/llvm-14/bin/../include/c++/v1/__iterator/default_sentinel.h \
+  /usr/lib/llvm-14/bin/../include/c++/v1/__iterator/data.h \
+  /usr/lib/llvm-14/bin/../include/c++/v1/__iterator/distance.h \
+  /usr/lib/llvm-14/bin/../include/c++/v1/__iterator/empty.h \
+  /usr/lib/llvm-14/bin/../include/c++/v1/__iterator/erase_if_container.h \
+  /usr/lib/llvm-14/bin/../include/c++/v1/__iterator/front_insert_iterator.h \
+  /usr/lib/llvm-14/bin/../include/c++/v1/__iterator/indirectly_comparable.h \
+  /usr/lib/llvm-14/bin/../include/c++/v1/__functional/identity.h \
+  /usr/lib/llvm-14/bin/../include/c++/v1/__iterator/projected.h \
+  /usr/lib/llvm-14/bin/../include/c++/v1/__iterator/insert_iterator.h \
+  /usr/lib/llvm-14/bin/../include/c++/v1/__iterator/istream_iterator.h \
+  /usr/lib/llvm-14/bin/../include/c++/v1/__iterator/istreambuf_iterator.h \
+  /usr/lib/llvm-14/bin/../include/c++/v1/__iterator/move_iterator.h \
+  /usr/lib/llvm-14/bin/../include/c++/v1/__iterator/next.h \
+  /usr/lib/llvm-14/bin/../include/c++/v1/__iterator/ostream_iterator.h \
+  /usr/lib/llvm-14/bin/../include/c++/v1/__iterator/ostreambuf_iterator.h \
+  /usr/lib/llvm-14/bin/../include/c++/v1/__iterator/prev.h \
+  /usr/lib/llvm-14/bin/../include/c++/v1/__iterator/reverse_access.h \
+  /usr/lib/llvm-14/bin/../include/c++/v1/__iterator/reverse_iterator.h \
+  /usr/lib/llvm-14/bin/../include/c++/v1/__iterator/size.h \
+  /usr/lib/llvm-14/bin/../include/c++/v1/__iterator/unreachable_sentinel.h \
+  /usr/lib/llvm-14/bin/../include/c++/v1/__iterator/wrap_iter.h \
+  /usr/lib/llvm-14/bin/../include/c++/v1/__memory/raw_storage_iterator.h \
   /usr/lib/llvm-14/bin/../include/c++/v1/__memory/temporary_buffer.h \
-  /usr/lib/llvm-14/bin/../include/c++/v1/mutex \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__mutex_base \
-  /usr/lib/llvm-14/bin/../include/c++/v1/system_error \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__errc \
-  /usr/lib/llvm-14/bin/../include/c++/v1/cerrno \
-  /usr/lib/llvm-14/bin/../include/c++/v1/string \
-  /usr/lib/llvm-14/bin/../include/c++/v1/algorithm \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__bits \
-  /usr/lib/llvm-14/bin/../include/c++/v1/functional \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__algorithm/search.h \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__algorithm/comp.h \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__functional/binary_negate.h \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__functional/bind.h \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__functional/bind_back.h \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__functional/perfect_forward.h \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__functional/bind_front.h \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__functional/binder1st.h \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__functional/binder2nd.h \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__functional/compose.h \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__functional/default_searcher.h \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__functional/function.h \
   /usr/lib/llvm-14/bin/../include/c++/v1/__functional/mem_fn.h \
   /usr/lib/llvm-14/bin/../include/c++/v1/__functional/mem_fun_ref.h \
   /usr/lib/llvm-14/bin/../include/c++/v1/__functional/not_fn.h \
@@ -392,6 +382,20 @@ CMakeFiles/a.out.app.dir/app/main.cpp.o: \
   /usr/lib/llvm-14/bin/../include/c++/v1/__algorithm/transform.h \
   /usr/lib/llvm-14/bin/../include/c++/v1/__algorithm/unique.h \
   /usr/lib/llvm-14/bin/../include/c++/v1/__algorithm/unique_copy.h \
+  /usr/lib/llvm-14/bin/../include/c++/v1/__split_buffer \
+  /usr/lib/llvm-14/bin/../include/c++/v1/iostream \
+  /usr/lib/llvm-14/bin/../include/c++/v1/ios \
+  /usr/lib/llvm-14/bin/../include/c++/v1/__locale \
+  /usr/lib/llvm-14/bin/../include/c++/v1/cctype \
+  /usr/lib/llvm-14/bin/../include/c++/v1/ctype.h /usr/include/ctype.h \
+  /usr/lib/llvm-14/bin/../include/c++/v1/locale.h /usr/include/locale.h \
+  /usr/include/x86_64-linux-gnu/bits/locale.h \
+  /usr/lib/llvm-14/bin/../include/c++/v1/mutex \
+  /usr/lib/llvm-14/bin/../include/c++/v1/__mutex_base \
+  /usr/lib/llvm-14/bin/../include/c++/v1/system_error \
+  /usr/lib/llvm-14/bin/../include/c++/v1/__errc \
+  /usr/lib/llvm-14/bin/../include/c++/v1/cerrno \
+  /usr/lib/llvm-14/bin/../include/c++/v1/string \
   /usr/lib/llvm-14/bin/../include/c++/v1/cstdio \
   /usr/lib/llvm-14/bin/../include/c++/v1/stdio.h /usr/include/stdio.h \
   /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
@@ -408,44 +412,8 @@ CMakeFiles/a.out.app.dir/app/main.cpp.o: \
   /usr/lib/llvm-14/bin/../include/c++/v1/istream \
   /usr/lib/llvm-14/bin/../include/c++/v1/ostream \
   /usr/lib/llvm-14/bin/../include/c++/v1/bitset \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__bit_reference \
   /usr/lib/llvm-14/bin/../include/c++/v1/locale \
   /usr/lib/llvm-14/bin/../include/c++/v1/cstdarg \
   /usr/lib/llvm-14/bin/../include/c++/v1/streambuf \
   /usr/include/nl_types.h \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__bsd_locale_fallbacks.h \
-  /home/quarkz/projects/Graph/app/Graph.hpp \
-  /usr/lib/llvm-14/bin/../include/c++/v1/vector \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__split_buffer \
-  /usr/lib/llvm-14/bin/../include/c++/v1/iomanip \
-  /usr/lib/llvm-14/bin/../include/c++/v1/optional \
-  /usr/lib/llvm-14/bin/../include/c++/v1/unordered_map \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__functional/is_transparent.h \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__hash_table \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__node_handle \
-  /usr/lib/llvm-14/bin/../include/c++/v1/map \
-  /usr/lib/llvm-14/bin/../include/c++/v1/__tree \
-  /usr/lib/llvm-14/bin/../include/c++/v1/unordered_set \
-  /usr/lib/llvm-14/bin/../include/c++/v1/stack \
-  /usr/lib/llvm-14/bin/../include/c++/v1/deque \
-  /usr/lib/llvm-14/bin/../include/c++/v1/queue \
-  /usr/lib/llvm-14/bin/../include/c++/v1/list \
-  /home/quarkz/projects/Graph/app/Support/UnionFind.hpp \
-  /home/quarkz/projects/Graph/app/prettyprint.hpp \
-  /usr/lib/llvm-14/bin/../include/c++/v1/set \
-  /usr/lib/llvm-14/bin/../include/c++/v1/valarray \
-  /home/quarkz/projects/Graph/app/Graph.tpp \
-  /home/quarkz/projects/Graph/app/GraphAlgo/DFS.tpp \
-  /home/quarkz/projects/Graph/app/GraphAlgo/BFS.tpp \
-  /home/quarkz/projects/Graph/app/GraphAlgo/TopSort.tpp \
-  /home/quarkz/projects/Graph/app/GraphAlgo/Dijkstras.tpp \
-  /home/quarkz/projects/Graph/app/GraphAlgo/BellmanFord.tpp \
-  /home/quarkz/projects/Graph/app/GraphAlgo/FloydWarshall.tpp \
-  /home/quarkz/projects/Graph/app/Applications/BridgesAndArticulations.tpp \
-  /home/quarkz/projects/Graph/app/GraphAlgo/Prims.tpp \
-  /home/quarkz/projects/Graph/app/GraphAlgo/Kruskals.tpp \
-  /home/quarkz/projects/Graph/app/GraphAlgo/TarjanSCC.tpp \
-  /home/quarkz/projects/Graph/app/Applications/Components.tpp \
-  /home/quarkz/projects/Graph/app/Applications/SSSPDAG.tpp \
-  /home/quarkz/projects/Graph/app/GraphAlgo/TravellingSalesman.tpp \
-  /home/quarkz/projects/Graph/app/GraphAlgo/Eulerian.tpp
+  /usr/lib/llvm-14/bin/../include/c++/v1/__bsd_locale_fallbacks.h

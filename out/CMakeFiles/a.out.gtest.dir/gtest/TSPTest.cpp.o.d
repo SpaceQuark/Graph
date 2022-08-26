@@ -1,5 +1,5 @@
-CMakeFiles/a.out.gtest.dir/gtest/SSSPTest.cpp.o: \
-  /home/quarkz/projects/Graph/gtest/SSSPTest.cpp \
+CMakeFiles/a.out.gtest.dir/gtest/TSPTest.cpp.o: \
+  /home/quarkz/projects/Graph/gtest/TSPTest.cpp \
   /usr/include/gtest/gtest.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/cstddef \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/x86_64-linux-gnu/c++/11/bits/c++config.h \
