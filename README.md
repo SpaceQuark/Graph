@@ -7,7 +7,7 @@ Future versions would include more formal testing, official documentation, C++ 2
 
 [![Generic badge](https://img.shields.io/badge/C++-17-blue.svg?style=flat&logo=c%2B%2B)](https://en.cppreference.com/w/cpp/17)
 
-[![Generic badge](https://img.shields.io/badge/CMake-3.16+-blue.svg)(https://cmake.org/cmake/help/latest/release/3.16.html)]
+[![Generic badge](https://img.shields.io/badge/CMake-3.16+-blue.svg)](https://cmake.org/cmake/help/latest/release/3.16.html)
 
 ## Dependencies
 The project requires CLang 14 (https://releases.llvm.org/14.0.0/tools/clang/docs/ReleaseNotes.html) and CMake 3.16 (https://cmake.org/) or more
