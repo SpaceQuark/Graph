@@ -7,12 +7,12 @@ This header file contains a Graph class template
 This Graph class contains vertices (nodes) that is
 represented by a list and edges that is represented by a 2D list.
 
-The Graph class implements various setter and getter and member functions
+The Graph class implements various member functions
 as well as several algorithm implementations.
 */
 
 #include <iostream>
-// #include <algorithm>
+#include <algorithm>
 #include <limits>
 #include <vector>
 #include <utility>
@@ -26,10 +26,8 @@ as well as several algorithm implementations.
 #include <stack>
 #include <queue>
 #include <list>
-// #include <bitset>
 
 
-// #include "../SupportADT/WEdge.hpp"
 #include "Support/UnionFind.hpp"
 
 #include "prettyprint.hpp"
@@ -41,12 +39,6 @@ using std::unordered_map;
 using std::unordered_set;
 
 
-template <typename W>
-constexpr W PINF = std::numeric_limits<W>::infinity();
-
-template <typename W>
-constexpr W NINF = -1 * std::numeric_limits<W>::infinity();
-
 namespace
 {
     template <typename W>
@@ -54,6 +46,13 @@ namespace
 
     template <typename W>
     constexpr W gmin = std::numeric_limits<W>::min();
+
+    template <typename W>
+    constexpr W PINF = std::numeric_limits<W>::infinity();
+
+    template <typename W>
+    constexpr W NINF = -1 * std::numeric_limits<W>::infinity();
+
 
     template <typename V, typename W>
     auto minp = [](const pair<V, W>& lhs, const pair<V, W>& rhs)
@@ -143,6 +142,7 @@ public:
 
     // topological sort
     vectV top_sort();
+    vectV Kahns();
 
     // components
     vector<vectV> findComponents();
@@ -166,7 +166,9 @@ public:
     // TSP (Hamiltonian circuit)
     pair<W, vectV> TSP(const V& source);
 
-    
+    // Bipartite 
+    bool Bipartite();
+
 private:
     
     unordered_map<V, pair<W, V>> dijkstras_construct(const V& source);
@@ -190,6 +192,7 @@ private:
 #include "GraphAlgo/DFS.tpp"
 #include "GraphAlgo/BFS.tpp"
 #include "GraphAlgo/TopSort.tpp"
+#include "GraphAlgo/Kahns.tpp"
 #include "GraphAlgo/Dijkstras.tpp"
 #include "GraphAlgo/BellmanFord.tpp"
 #include "GraphAlgo/FloydWarshall.tpp"
@@ -205,5 +208,7 @@ private:
 
 #include "GraphAlgo/TravellingSalesman.tpp"
 #include "GraphAlgo/Eulerian.tpp"
+
+#include "NetworkFlow/Bipartite.tpp"
 
 #endif

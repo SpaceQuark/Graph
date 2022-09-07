@@ -130,19 +130,6 @@ a.out.app/fast:
 .PHONY : a.out.app/fast
 
 #=============================================================================
-# Target rules for targets named a.out.exp
-
-# Build rule for target.
-a.out.exp: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 a.out.exp
-.PHONY : a.out.exp
-
-# fast build rule for target.
-a.out.exp/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.exp.dir/build.make CMakeFiles/a.out.exp.dir/build
-.PHONY : a.out.exp/fast
-
-#=============================================================================
 # Target rules for targets named a.out.gtest
 
 # Build rule for target.
@@ -161,7 +148,7 @@ app/Support/UnionFind.o: app/Support/UnionFind.cpp.o
 # target to build an object file
 app/Support/UnionFind.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.app.dir/build.make CMakeFiles/a.out.app.dir/app/Support/UnionFind.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.exp.dir/build.make CMakeFiles/a.out.exp.dir/app/Support/UnionFind.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.gtest.dir/build.make CMakeFiles/a.out.gtest.dir/app/Support/UnionFind.cpp.o
 .PHONY : app/Support/UnionFind.cpp.o
 
 app/Support/UnionFind.i: app/Support/UnionFind.cpp.i
@@ -170,7 +157,7 @@ app/Support/UnionFind.i: app/Support/UnionFind.cpp.i
 # target to preprocess a source file
 app/Support/UnionFind.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.app.dir/build.make CMakeFiles/a.out.app.dir/app/Support/UnionFind.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.exp.dir/build.make CMakeFiles/a.out.exp.dir/app/Support/UnionFind.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.gtest.dir/build.make CMakeFiles/a.out.gtest.dir/app/Support/UnionFind.cpp.i
 .PHONY : app/Support/UnionFind.cpp.i
 
 app/Support/UnionFind.s: app/Support/UnionFind.cpp.s
@@ -179,7 +166,7 @@ app/Support/UnionFind.s: app/Support/UnionFind.cpp.s
 # target to generate assembly for a file
 app/Support/UnionFind.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.app.dir/build.make CMakeFiles/a.out.app.dir/app/Support/UnionFind.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.exp.dir/build.make CMakeFiles/a.out.exp.dir/app/Support/UnionFind.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.gtest.dir/build.make CMakeFiles/a.out.gtest.dir/app/Support/UnionFind.cpp.s
 .PHONY : app/Support/UnionFind.cpp.s
 
 app/main.o: app/main.cpp.o
@@ -205,54 +192,6 @@ app/main.s: app/main.cpp.s
 app/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.app.dir/build.make CMakeFiles/a.out.app.dir/app/main.cpp.s
 .PHONY : app/main.cpp.s
-
-exp/Components.o: exp/Components.cpp.o
-.PHONY : exp/Components.o
-
-# target to build an object file
-exp/Components.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.exp.dir/build.make CMakeFiles/a.out.exp.dir/exp/Components.cpp.o
-.PHONY : exp/Components.cpp.o
-
-exp/Components.i: exp/Components.cpp.i
-.PHONY : exp/Components.i
-
-# target to preprocess a source file
-exp/Components.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.exp.dir/build.make CMakeFiles/a.out.exp.dir/exp/Components.cpp.i
-.PHONY : exp/Components.cpp.i
-
-exp/Components.s: exp/Components.cpp.s
-.PHONY : exp/Components.s
-
-# target to generate assembly for a file
-exp/Components.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.exp.dir/build.make CMakeFiles/a.out.exp.dir/exp/Components.cpp.s
-.PHONY : exp/Components.cpp.s
-
-exp/expmain.o: exp/expmain.cpp.o
-.PHONY : exp/expmain.o
-
-# target to build an object file
-exp/expmain.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.exp.dir/build.make CMakeFiles/a.out.exp.dir/exp/expmain.cpp.o
-.PHONY : exp/expmain.cpp.o
-
-exp/expmain.i: exp/expmain.cpp.i
-.PHONY : exp/expmain.i
-
-# target to preprocess a source file
-exp/expmain.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.exp.dir/build.make CMakeFiles/a.out.exp.dir/exp/expmain.cpp.i
-.PHONY : exp/expmain.cpp.i
-
-exp/expmain.s: exp/expmain.cpp.s
-.PHONY : exp/expmain.s
-
-# target to generate assembly for a file
-exp/expmain.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.exp.dir/build.make CMakeFiles/a.out.exp.dir/exp/expmain.cpp.s
-.PHONY : exp/expmain.cpp.s
 
 gtest/APSPTest.o: gtest/APSPTest.cpp.o
 .PHONY : gtest/APSPTest.o
@@ -527,7 +466,6 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... a.out.app"
-	@echo "... a.out.exp"
 	@echo "... a.out.gtest"
 	@echo "... app/Support/UnionFind.o"
 	@echo "... app/Support/UnionFind.i"
@@ -535,12 +473,6 @@ help:
 	@echo "... app/main.o"
 	@echo "... app/main.i"
 	@echo "... app/main.s"
-	@echo "... exp/Components.o"
-	@echo "... exp/Components.i"
-	@echo "... exp/Components.s"
-	@echo "... exp/expmain.o"
-	@echo "... exp/expmain.i"
-	@echo "... exp/expmain.s"
 	@echo "... gtest/APSPTest.o"
 	@echo "... gtest/APSPTest.i"
 	@echo "... gtest/APSPTest.s"

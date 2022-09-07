@@ -1,3 +1,7 @@
+# Version 0.22
+- Added Kahn's algorithm along with Bipartite checker (network flow)
+- Next version will include more graph applications
+
 # Version 0.21
 - Added TSP and Eulerian algorithms
 - wrote several new googletests for previous algorithms (MST) and for graph object. 

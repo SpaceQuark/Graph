@@ -438,6 +438,7 @@ CMakeFiles/a.out.app.dir/app/main.cpp.o: \
   /home/quarkz/projects/Graph/app/GraphAlgo/DFS.tpp \
   /home/quarkz/projects/Graph/app/GraphAlgo/BFS.tpp \
   /home/quarkz/projects/Graph/app/GraphAlgo/TopSort.tpp \
+  /home/quarkz/projects/Graph/app/GraphAlgo/Kahns.tpp \
   /home/quarkz/projects/Graph/app/GraphAlgo/Dijkstras.tpp \
   /home/quarkz/projects/Graph/app/GraphAlgo/BellmanFord.tpp \
   /home/quarkz/projects/Graph/app/GraphAlgo/FloydWarshall.tpp \
@@ -448,4 +449,5 @@ CMakeFiles/a.out.app.dir/app/main.cpp.o: \
   /home/quarkz/projects/Graph/app/Applications/Components.tpp \
   /home/quarkz/projects/Graph/app/Applications/SSSPDAG.tpp \
   /home/quarkz/projects/Graph/app/GraphAlgo/TravellingSalesman.tpp \
-  /home/quarkz/projects/Graph/app/GraphAlgo/Eulerian.tpp
+  /home/quarkz/projects/Graph/app/GraphAlgo/Eulerian.tpp \
+  /home/quarkz/projects/Graph/app/NetworkFlow/Bipartite.tpp

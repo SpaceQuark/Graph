@@ -1,5 +1,5 @@
-#ifndef KRUSKALS_TPP
-#define KRUSKALS_TPP
+#ifndef KRUSKALS_HPP
+#define KRUSKALS_HPP
 
 
 /*

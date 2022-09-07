@@ -46,14 +46,6 @@ void Graph<V,W>::del_vertex(const V& v)
             vertices[vidx.first] = numV++;
         }
 
-        // Shift the adjacency list to new id
-        // for (size_t i = idx+1; i < numV; ++i)
-        // {
-        //     auto nk = edges.extract(i);
-        //     nk.key() = i-1;
-        //     // edges.insert(std::move(nk));
-        // }
-
         // remove vertex via erase remove idiom
         for (auto& [from, vec] : edges)
         {
@@ -303,9 +295,7 @@ void Graph<V,W>::pM()
         lookup[idx] = v;
     }
 
-
     // printing the 2D matrix
-
     std::cout << std::string(10, ' ' );
     for (const auto& v : lookup)
     {

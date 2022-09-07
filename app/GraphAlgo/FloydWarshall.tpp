@@ -10,7 +10,11 @@ Ideal for
 Can be used only for adjacency matrices
 
 FW algorithm
-1. Start 
+1. Start by initializing the adjacency matrix 
+2. update the adjacency matrix by considering all vertices as an intermediate vertex
+3. Pick all vertices and update all shortest paths (picked vertex serves as an intermediate vertex)
+4. For all vertices pairs, relax each edge weight
+5. Repeat 1-4 but this time relax if the 
 
 
 Time Complexity: O(V^3)

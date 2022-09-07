@@ -46,12 +46,11 @@ TEST(MSTAlgo, KruskalMST)
     g.add_edge(2, 4, 4);
     g.add_edge(3, 4, 3);
     g.add_edge(5, 4, 3);
+    
+    auto MST = g.Kruskals(0);
 
-    // In Progress: UnionFind linkage
-    // auto MST = g.Kruskals(0);
-
-    // int total_weight = 12;
-    // vector<tuple<int, int, int>> MST_edges = {{0, 4, 1}, {4, 5, 1}, {4, 3, 2}, {3, 1, 2}, {3, 7, 2}, {7, 6, 1}, {6, 8, 2}, {8, 9, 0}, {8, 2, 1}};
-    // EXPECT_EQ(MST.first, total_weight);
-    // EXPECT_EQ(MST.second, MST_edges);
+    int total_weight = 14;
+    vector<tuple<int, int, int>> MST_edges = { {5, 2, 2}, {2, 1, 2}, {4, 3, 3}, {4, 5, 3}, {2, 0, 4} };
+    EXPECT_EQ(MST.first, total_weight);
+    EXPECT_EQ(MST.second, MST_edges);
 }
