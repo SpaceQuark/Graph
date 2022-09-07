@@ -21,10 +21,12 @@ git clone https://github.com/SpaceQuark/Graph-Library
 You can then build (compile) and run this project by typing 
 '''bash 
 ./build app
-'''and 
+'''
+and 
 '''bash 
 ./run app
-''' in the terminal
+''' 
+in the terminal
 
 ## Example Code
 Users can easily create a graph object (in the example below, an integral, weighted, undirected graph)
