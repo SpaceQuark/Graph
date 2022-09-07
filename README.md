@@ -20,7 +20,8 @@ You can then build (compile) and run this project by typing '''./build app''' an
 ## Example Code
 Users can easily create a graph object (in the example below, an integral, weighted, undirected graph)
 
-'''#include "Graph.hpp"
+'''C++
+#include "Graph.hpp"
 
 int main()
 {
