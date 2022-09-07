@@ -6,7 +6,6 @@ The goal of this project is to provide a lightweight and user-friendly graph lib
 Future versions would include more formal testing, official documentation, C++ 20 concepts, and working GUI.
 
 [![Generic badge](https://img.shields.io/badge/C++-17-blue.svg?style=flat&logo=c%2B%2B)](https://en.cppreference.com/w/cpp/17)
-
 [![Generic badge](https://img.shields.io/badge/CMake-3.16+-blue.svg)](https://cmake.org/cmake/help/latest/release/3.16.html)
 
 ## Dependencies
@@ -20,8 +19,8 @@ You can then build (compile) and run this project by typing '''./build app''' an
 
 ## Example Code
 Users can easily create a graph object (in the example below, an integral, weighted, undirected graph)
-'''
-#include "Graph.hpp"
+
+'''#include "Graph.hpp"
 
 int main()
 {
