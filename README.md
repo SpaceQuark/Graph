@@ -12,10 +12,10 @@ Future versions would include more formal testing, official documentation, C++ 2
 The project requires CLang 14 (https://releases.llvm.org/14.0.0/tools/clang/docs/ReleaseNotes.html) and CMake 3.16 (https://cmake.org/) or more
 
 ## How to compile
-This libary is header-only. To install first clone this repository with '''git clone https://github.com/SpaceQuark/Graph-Library'''
+This libary is header-only. To install first clone this repository with '''git git clone https://github.com/SpaceQuark/Graph-Library'''
 
 
-You can then build (compile) and run this project by typing '''./build app''' and '''./run app''' in the terminal
+You can then build (compile) and run this project by typing '''bash ./build app''' and '''bash ./run app''' in the terminal
 
 ## Example Code
 Users can easily create a graph object (in the example below, an integral, weighted, undirected graph)
