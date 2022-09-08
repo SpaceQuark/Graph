@@ -23,7 +23,8 @@ This libary is header-only. To install first clone this repository with
 You can then build (compile) and run this project by typing 
 ```bash 
 ./build app
-``` and 
+``` 
+and 
 ```bash 
 ./run app
 ``` 
