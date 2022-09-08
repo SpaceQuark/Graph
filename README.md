@@ -16,19 +16,17 @@ This libary is header-only. To install first clone this repository with
 
 ```
  $ git clone https://github.com/SpaceQuark/Graph-Library
-'''
 ```
 
 
 
 You can then build (compile) and run this project by typing 
-'''bash 
+```bash 
 ./build app
-'''
-and 
-'''bash 
+``` and 
+```bash 
 ./run app
-''' 
+``` 
 in the terminal
 
 ## Example Code
