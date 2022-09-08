@@ -33,7 +33,7 @@ in the terminal
 ## Example Code
 Users can easily create a graph object (in the example below, an integral, weighted, undirected graph)
 
-'''C++
+``` C++
 #include "Graph.hpp"
 
 int main()
@@ -54,4 +54,4 @@ int main()
     Start: 4 End: 2 Weight 10
     */
 }
-'''
+``` 
