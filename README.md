@@ -13,9 +13,12 @@ The project requires CLang 14 (https://releases.llvm.org/14.0.0/tools/clang/docs
 
 ## How to compile
 This libary is header-only. To install first clone this repository with 
-''' 
-$ git clone https://github.com/SpaceQuark/Graph-Library
+
+```
+ $ git clone https://github.com/SpaceQuark/Graph-Library
 '''
+```
+
 
 
 You can then build (compile) and run this project by typing 
