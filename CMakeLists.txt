@@ -1,42 +1,66 @@
-cmake_minimum_required(VERSION 3.16)
+# Minimum version of CMake required
+cmake_minimum_required(VERSION 3.10)
 
+# Project name and version
+project(Vertexium VERSION 2.0)
 
+# Set the C++ standard for the project
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED True)
 
-set(CMAKE_C_COMPILER clang)
-set(CMAKE_CXX_COMPILER clang++-14)
-set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
-set(CMAKE_CXX_EXTENSIONS OFF)
-
-set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
-set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
+# Set output directories for binaries and libraries
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
 
-set(COMPILE_FLAGS "-stdlib=libc++ -Wall -pedantic-errors -Werror -g -fstandalone-debug")
+# Include directories where the header files are located
+include_directories(${PROJECT_SOURCE_DIR}/include)
+
+# Add all source files
+file(GLOB_RECURSE SOURCES "src/*.cpp") # m"src/algo/*.cpp"
+list(REMOVE_ITEM SOURCES "${CMAKE_SOURCE_DIR}/src/main/main.cpp")
+
+# Add the executable target, which is built from the source files
+add_executable(Vertexium ${SOURCES} src/main/main.cpp)
+
+# Optional: Add compile options (warnings)
+target_compile_options(Vertexium PRIVATE -Wall -Wextra -Wpedantic)
+
+# Optional: If you want to link external libraries, such as threading, etc.
+# find_package(Threads REQUIRED)
+# target_link_libraries(Vertexium PRIVATE Threads::Threads)
+
+# Optional: Add version number
+configure_file(include/Config.h.in Config.h)
+
+set(CTEST_OUTPUT_ON_FAILURE TRUE)
+set(CTEST_VERBOSE TRUE)
+set(CMAKE_CTEST_ARGUMENTS "-V") 
 
 
+# set(CMAKE_CTEST_ARGUMENTS "--output-on-failure" "--verbose")
 
-project(a.out.app)
+find_package(Catch2 REQUIRED)
+include(CTest)
+include(Catch)
 
-file(GLOB_RECURSE APP_SRC_FILES ${CMAKE_SOURCE_DIR}/app/*.cpp)
+## Gather all test source files
+file(GLOB_RECURSE TEST_SOURCES "tests/*.cpp")
 
-set(APP_SRC_FILES_EXCEPT_MAIN ${APP_SRC_FILES})
-list(REMOVE_ITEM APP_SRC_FILES_EXCEPT_MAIN ${CMAKE_SOURCE_DIR}/app/main.cpp)
+# Add the test executable
+add_executable(Tests ${TEST_SOURCES} ${SOURCES})
 
-add_executable(${PROJECT_NAME} ${APP_SRC_FILES})
-set_target_properties(${PROJECT_NAME} PROPERTIES COMPILE_FLAGS ${COMPILE_FLAGS})
-target_include_directories(${PROJECT_NAME} PRIVATE ${CMAKE_SOURCE_DIR}/app)
-target_link_libraries(${PROJECT_NAME} pthread c++)
+# Enable compiler warnings for tests (optional but recommended)
+target_compile_options(Tests PRIVATE -Wall -Wextra -Wpedantic)
 
+# Link the test executable with Catch2
+target_link_libraries(Tests PRIVATE Catch2::Catch2)
 
+# Enable testing
+enable_testing()
 
-project(a.out.gtest)
-
-file(GLOB_RECURSE GTEST_SRC_FILES ${CMAKE_SOURCE_DIR}/gtest/*.cpp)
-
-find_package(GTest REQUIRED)
-include_directories(${GTEST_INCLUDE_DIRS})
-
-add_executable(${PROJECT_NAME} ${GTEST_SRC_FILES} ${APP_SRC_FILES_EXCEPT_MAIN})
-
-target_link_libraries(${PROJECT_NAME} ${GTEST_LIBRARIES} pthread c++)
+# Discover and register Catch2 tests with CTest
+catch_discover_tests(Tests
+    REPORTER console
+    VERBOSE TRUE
+    EXTRA_ARGS "--durations yes"
+)
