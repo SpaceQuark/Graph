@@ -15,8 +15,24 @@ The Graph class implements various member functions
 as well as several algorithm implementations.
 */
 
+namespace std {
+    template <>
+    struct hash<pair<uint64_t, uint64_t>> {
+        size_t operator()(const pair<uint64_t, uint64_t>& p) const {
+            size_t seed = hash<uint64_t>{}(p.first);
+            seed ^= hash<uint64_t>{}(p.second) + 0x9e3779b9 + (seed << 6) + (seed >> 2);
+            return seed;
+        }
+    };
+}
+
+
 using VertexList = vector<Vertex>;
+using VertexIds = vector<uint64_t>;
+using VertexIdPair = pair<uint64_t, uint64_t>;
+using VertexIdWeights = vector<pair<uint64_t, double>>;
 using EdgeSet = unordered_set<Edge>;
+using EdgeMap = unordered_map<VertexIdPair, Edge>;
 using AdjList = vector<unordered_set<uint64_t>>;
 using AdjMatrix = vector<vector<bool>>;
 
@@ -27,42 +43,20 @@ enum AdjMatrixKey {AM};
 class Graph
 {
 public:
-    // 2 different constructors that can be called to initialize a Graph object
-    explicit Graph(bool undirected_ = true, bool weighted_ = false, bool flows_ = false, const VertexList& vertices_ = {});
+    explicit Graph(size_t num_vertices_ = 0, bool undirected_ = true, bool weighted_ = false, bool flows_ = false);
 
     // destructor
     virtual ~Graph() = default;
 
-
-    // size_t get_numV() const;
-    // size_t get_numE() const;
-
-    // const VertexList& get_V() const;
-    // const EdgeSet& get_E() const;
-
-    // const vector<unordered_set<uint64_t>>& get_AL() const;
-    // const vector<vector<bool>>& get_AM() const;
-
-
-
     const VertexList& operator[](VertexKey key) const;
-    const EdgeSet& operator[](EdgeKey key) const;
+    const EdgeMap& operator[](EdgeKey key) const;
     const AdjList& operator[](AdjListKey key) const;
     const AdjMatrix& operator[](AdjMatrixKey key) const;
-    //     if (key == V) {
-    //         return vertices;
-    //     }
-    //     throw invalid_argument("Invalid key for access");
-    // }
-
-
 
     bool is_undirected() const;
     bool is_weighted() const;
     bool is_flows() const;
 
-
-    // add vertex and delete vetex
     void add_vertex(const uint64_t& v_id, const char* name = "", Color color = Color::Black);
     void del_vertex(const uint64_t& v_id);
 
@@ -73,24 +67,24 @@ public:
     bool has_edge(const uint64_t& v_id, const uint64_t& w_id) const;
 
     void build_adj_list();
-    // void clear_adj_list();
     void build_adj_matrix();
-    // void clear_adj_matrix();
 
 
     // -------------------------------------------------------------------------------------
 
-    VertexList BFS(const uint64_t& source);
-    VertexList DFS(const uint64_t& source);
- 
+    // Traversals
 
-private:
-    
+    VertexIds BFS(const uint64_t& source);
+    VertexIds DFS(const uint64_t& source);
+    VertexIds DFS_cycle();
+
+    //ShortestPaths
+    VertexIdWeights dijkstras(const uint64_t& source);
 
 // private member variables
 private:
     VertexList vertices;
-    EdgeSet edges;
+    EdgeMap edges;
 
     AdjList adj_list;
     AdjMatrix adj_matrix;

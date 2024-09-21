@@ -1,0 +1,20 @@
+#!/bin/bash
+
+
+# RUN_MEMCHECK=0
+WHAT_TO_CHECK=app
+
+
+
+SCRIPT_DIR=$(readlink -m $(dirname $0))
+
+$SCRIPT_DIR/require $WHAT_TO_CHECK
+
+if [ $? -eq 0 ]; then
+    valgrind --tool=memcheck --leak-check=yes --show-reachable=yes --track-origins=yes --suppressions=memcheck.supp $SCRIPT_DIR/out/bin/a.out.$WHAT_TO_CHECK
+
+else
+    echo "Could not find $WHAT_TO_CHECK; have you successfully built?"
+    echo
+    exit 1
+fi

@@ -34,10 +34,6 @@ struct Edge {
     Edge(uint64_t x_id_, uint64_t y_id_, double weight_ = 0.0, Color color_ = Color::Black, double flow_ = 0.0, double capacity_ = 0.0)
         : x_id(x_id_), y_id(y_id_), weight(weight_), color(color_), flow(flow_), capacity(capacity_) {}
 
-    // Edge(const Edge&) = delete;
-    // Edge& operator=(const Edge&) = delete;
-
-
     // partial comparison
     bool operator==(const Edge& other) const {
         return x_id == other.x_id && y_id == other.y_id; 
@@ -47,7 +43,6 @@ struct Edge {
     bool comp(const Edge& other) const{
         return x_id == other.x_id && y_id == other.y_id && weight == other.weight && flow == other.flow && capacity == other.capacity;
     }
-
 
     // Print function to display edge information
     friend ostream& operator<<(ostream& os, const Edge& e) {
@@ -60,7 +55,6 @@ struct Edge {
            << ", Weight: " << weight << ", Color: " << color.to_string()
            << ", Flow: " << flow << ", Capacity: " << capacity << endl;
     }
-
 };
 
 // Hash function for Edge (specialization of std::hash)
@@ -68,16 +62,9 @@ namespace std {
     template <>
     struct hash<Edge> {
         size_t operator()(const Edge& e) const {
-            size_t h1 = hash<uint64_t>{}(e.x_id); 
-            size_t h2 = hash<uint64_t>{}(e.y_id); 
-            // size_t h3 = hash<double>{}(e.weight);  
-            // size_t h4 = hash<uint8_t>{}(e.color.value);  
-            // size_t h5 = hash<double>{}(e.flow);  
-            // size_t h6 = hash<double>{}(e.capacity); 
-
-            // // Combine the hashes using XOR and bit-shifting
-            return h1 ^ (h2 << 1);
-            //  ^ (h3 << 2) ^ (h4 << 3) ^ (h5 << 4) ^ (h6 << 5);
+            size_t seed = hash<uint64_t>{}(e.x_id);
+            seed ^= hash<uint64_t>{}(e.y_id) + 0x9e3779b9 + (seed << 6) + (seed >> 2);
+            return seed;
         }
     };
 }

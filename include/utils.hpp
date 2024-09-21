@@ -35,6 +35,7 @@ using std::array;
 using std::optional;
 using std::nullopt;
 using std::hash;
+using std::numeric_limits;
 
 using std::vector;
 using std::pair;
@@ -42,7 +43,14 @@ using std::unordered_set;
 using std::unordered_map;
 using std::stack;
 using std::queue;
+using std::priority_queue;
 
 using std::remove;
 using std::remove_if;
 using std::invalid_argument;
+using std::function;
+using std::greater;
+
+#define MX uint64_t{-1}
+#define INV uint64_t{-1}
+

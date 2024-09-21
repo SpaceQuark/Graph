@@ -81,6 +81,21 @@
     "future": "cpp",
     "queue": "cpp",
     "ranges": "cpp",
-    "stacktrace": "cpp"
+    "stacktrace": "cpp",
+    "barrier": "cpp",
+    "cfenv": "cpp",
+    "codecvt": "cpp",
+    "coroutine": "cpp",
+    "csetjmp": "cpp",
+    "cuchar": "cpp",
+    "forward_list": "cpp",
+    "source_location": "cpp",
+    "generator": "cpp",
+    "latch": "cpp",
+    "print": "cpp",
+    "scoped_allocator": "cpp",
+    "spanstream": "cpp",
+    "syncstream": "cpp",
+    "typeindex": "cpp"
   }
 }

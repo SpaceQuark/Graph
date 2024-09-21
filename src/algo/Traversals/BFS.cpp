@@ -1,12 +1,12 @@
 #include "Graph.hpp"
 
-VertexList Graph::BFS(const uint64_t& source)
+VertexIds Graph::BFS(const uint64_t& source)
 {
     assert(!adj_list.empty() && "Adjacency list is empty!");
     
     vector<bool> visited(vertices.size(), false);
     visited[source] = true;
-    VertexList sequence = {vertices[source]};
+    VertexIds sequence = {vertices[source].id};
 
 
     queue<uint64_t> q;
@@ -23,7 +23,7 @@ VertexList Graph::BFS(const uint64_t& source)
             if (!visited[neighbor])
             {
                 visited[neighbor] = true;
-                sequence.push_back(vertices[neighbor]);
+                sequence.push_back(vertices[neighbor].id);
                 q.push(neighbor);
             }
         }
