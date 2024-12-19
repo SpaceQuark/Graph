@@ -21,6 +21,7 @@ using std::enable_if_t;
 using std::is_same_v;
 
 struct Edge {
+
     uint64_t x_id;        
     uint64_t y_id;
     int64_t weight;        
@@ -45,7 +46,8 @@ struct Edge {
 
     virtual void print() const {
         std::cout << "Edge from Vertex " << x_id << " to Vertex " << y_id
-                  << ", Weight: " << weight << ", Flow: " << flow
+                  << ", Weight: " << weight
+                  << ", Flow: " << flow
                   << ", Capacity: " << capacity << std::endl;
     }
 };

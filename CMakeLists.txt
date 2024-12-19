@@ -16,14 +16,14 @@ set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
 include_directories(${PROJECT_SOURCE_DIR}/include)
 
 # Add all source files
-file(GLOB_RECURSE SOURCES "src/*.cpp") # m"src/algo/*.cpp"
+file(GLOB_RECURSE SOURCES "src/*.cpp" "algo/*.cpp")
 list(REMOVE_ITEM SOURCES "${CMAKE_SOURCE_DIR}/src/main/main.cpp")
 
 # Add the executable target, which is built from the source files
 add_executable(Vertexium ${SOURCES} src/main/main.cpp)
 
 # Optional: Add compile options (warnings)
-target_compile_options(Vertexium PRIVATE -Wall -Wextra -Wpedantic)
+target_compile_options(Vertexium PRIVATE -Wall -Wextra -Wpedantic -static-libstdc++ -static-libgcc)
 
 # Optional: If you want to link external libraries, such as threading, etc.
 # find_package(Threads REQUIRED)
@@ -45,6 +45,7 @@ include(Catch)
 
 ## Gather all test source files
 file(GLOB_RECURSE TEST_SOURCES "tests/*.cpp")
+message(STATUS "Test sources found: ${TEST_SOURCES}")
 
 # Add the test executable
 add_executable(Tests ${TEST_SOURCES} ${SOURCES})
@@ -64,3 +65,16 @@ catch_discover_tests(Tests
     VERBOSE TRUE
     EXTRA_ARGS "--durations yes"
 )
+
+if (CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang")
+    # Enable compiler flags for coverage
+    target_compile_options(Tests PRIVATE -g --coverage)
+    target_link_options(Tests PRIVATE --coverage)
+
+    # Define a custom target for coverage
+    add_custom_target(coverage
+        COMMAND ${CMAKE_SOURCE_DIR}/generate_coverage.sh ${CMAKE_BINARY_DIR} ${CMAKE_SOURCE_DIR}
+        COMMENT "Generating coverage report"
+        WORKING_DIRECTORY ${CMAKE_BINARY_DIR}
+    )
+endif()

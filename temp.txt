@@ -1,0 +1,25 @@
+    void del_edge(uint64_t v_id, uint64_t w_id){
+        if (!has_edge(v_id, w_id)){
+            cerr << "Edge " << v_id << " -> " << w_id << " does not exists in the graph." << endl;
+        } else {
+            edges.erase({v_id, w_id});
+            cerr << "Edge " << v_id << " -> " << w_id << " deleted." << endl;
+
+            if (undirected){
+                edges.erase({w_id, v_id});
+                cerr << "Edge " << w_id << " -> " << v_id << " deleted." << endl;
+
+            }
+
+            this->stale_adj_list = true;
+            this->stale_adj_matrix = true;
+        }
+    }
+
+	        for (const Edge& edge : edges) { // Iterate through each edge in the edge list
+            assert((edge.x_id < vertices.size() && edge.y_id < vertices.size()) &&
+                   "Vertex IDs out of bounds!");
+
+            // Add the edge to the adjacency list of edge.x_id
+            adj_list[edge.x_id].push_back(&edge);
+        }

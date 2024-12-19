@@ -2,13 +2,6 @@
 #define VERTEX_HPP
 
 #include "utils.hpp"
-#include <iostream>
-#include <array>
-#include <string>
-#include <functional> // For std::hash
-
-// Forward declaration
-class Vertex; 
 
 struct Color {
     enum Value : uint8_t{
@@ -21,6 +14,7 @@ struct Color {
     };
 
     Value value;
+
     Color(Value v) : value(v) {}
 
     inline string to_string() const {
@@ -35,6 +29,7 @@ struct Color {
         }
     }
 
+
     bool operator==(const Color& other) const{
         return value == other.value;
     }
@@ -45,36 +40,45 @@ struct Color {
 };
 
 
+enum VertexKey {V};
+
 /*
-    Vertex structure representing a node with two key properties:
+    Vertex structure representing a node with three key properties:
 
     - id: A unique identifier for the vertex 
+    - color: The color of the vertex (default value of black)
     - name: A fixed-size character array to store the vertex name (default value of )
 */
 struct Vertex {
     uint64_t id;       
-    std::array<char, 50> name; 
-    Color color;       
+    array<char, 50> name;        
+    Color color;      
 
-    Vertex(uint64_t id_, const string& name_ = "", Color color_ = Color::Black) : id(id_), color(color_) {
-       size_t result = snprintf(name.data(), name.size(), "%.*s", static_cast<int>(std::min(name_.size(), name.size() - 1)), name_.c_str());
+    // Constructor
+    Vertex(const char* name_ = "", Color color_ = Color::Black) : id(0), color(color_) {
+        size_t result = snprintf(name.data(), name.size(), "%s", name_);
 
         if (result >= name.size()) {
-          std::cerr << "Warning: name truncated to fit into 50 characters." << std::endl;
-       }
+            cerr << "Warning: name truncated to fit into 50 characters." << endl;
+        }
     }
-    
-    virtual ~Vertex() = default;
-    bool operator==(const Vertex& other) const{ return id == other.id; }
+
+    bool operator==(const Vertex& other) const{
+        return id == other.id;
+    }
+
+    bool comp(const Vertex& other) const{
+        return id == other.id && name.data() == other.name.data() && color == other.color;
+    }
 
     // print function to display vertex information
-    friend std::ostream& operator<<(std::ostream& os, const Vertex& v) {
+    friend ostream& operator<<(ostream& os, const Vertex& v) {
         os << v.id;
         return os;
     }
 
-    virtual void print(){
-        std::cout << " Vertex: " << id << ", Name: " << name.data() <<  std::endl;
+    void print(){
+        cout << " Vertex ID: " << id << ", Name: " << name.data() << ", Color: " << color.to_string() << endl;
     }
 };
 
@@ -82,8 +86,13 @@ namespace std {
     template <>
     struct hash<Vertex> {
         size_t operator()(const Vertex& v) const {
-            size_t h1 = hash<uint64_t>{}(v.id);
+            size_t h1 = hash<uint64_t>{}(v.id);  
+            // size_t h2 = hash<string_view>{}(v.name.data());  
+            // size_t h3 = hash<uint8_t>{}(v.color.value);  
+
+            // // Combine the hashes using XOR and bit-shifting
             return h1;
+            //  ^ (h2 << 1) ^ (h3 << 2);
         }
     };
 }

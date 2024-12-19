@@ -9,9 +9,11 @@
 #include <stdio.h>
 #include <variant>
 #include <type_traits> // For std::decay_t
+#include <concepts>
 
 #include <algorithm> 
 #include <limits>
+#include <numeric>
 #include <vector>
 #include <utility>
 #include <tuple>
@@ -51,6 +53,14 @@ using std::invalid_argument;
 using std::function;
 using std::greater;
 
-#define MX uint64_t{-1}
-#define INV uint64_t{-1}
+using std::min;
+using std::max;
+
+template <class T>
+using min_heap = std::priority_queue<T, std::vector<T>, std::greater<T>>;
+
+// #define MX uint64_t{-1}
+#define INV static_cast<uint64_t>(-1)
+
+#define WINF std::numeric_limits<int64_t>::max()
 

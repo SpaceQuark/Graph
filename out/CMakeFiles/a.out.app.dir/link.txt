@@ -1,1 +1,0 @@
-/usr/bin/clang++-14 CMakeFiles/a.out.app.dir/app/Support/UnionFind.cpp.o CMakeFiles/a.out.app.dir/app/main.cpp.o -o bin/a.out.app  -lpthread -lc++ 

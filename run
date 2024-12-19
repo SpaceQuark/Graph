@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# Set the output directory and executable name
+OUT_DIR="build/bin"
+EXECUTABLE="Vertexium"
+
+# Check if the directory exists
+if [ -d "$OUT_DIR" ]; then
+    echo "Navigating to $OUT_DIR..."
+    cd "$OUT_DIR" || { echo "Failed to enter $OUT_DIR"; exit 1; }
+else
+    echo "Directory $OUT_DIR does not exist."
+    exit 1
+fi
+
+# Check if the executable exists
+if [ -f "$EXECUTABLE" ]; then
+    echo "Running $EXECUTABLE..."
+    ./"$EXECUTABLE" || { echo "Execution failed."; exit 1; }
+else
+    echo "Executable $EXECUTABLE not found in $OUT_DIR."
+    exit 1
+fi
